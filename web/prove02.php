@@ -2,7 +2,7 @@
 <html>
 <head>
    <title>Home Page</title>
-   <link rel="stylesheet" type="text/css" href="squidward">
+   <link rel="stylesheet" type="text/css" href="squidward.css">
 </head>
 <body>
    <h1>Home page yo!</h1>

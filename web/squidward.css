@@ -10,9 +10,12 @@
 }
 
 hr {
-   border: 4px purple;
+
 }
 
 .options {
-
+   padding-top: 8px;
+   padding-bottom: 8px;
+   background-color: solid black;
+   text-decoration-color: white;
 }

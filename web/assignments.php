@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>Home Page</title>
+   <title>Assignments</title>
    <link rel="stylesheet" type="text/css" href="squidward.css">
 </head>
 <body>
-   <h1>Home page yo!</h1>
+   <h1>Assignments yo!!</h1>
    <div class="header">
-      <p>CS313</p>
+      <p>Cool Stuff Coming Soon (I think...?)</p>
    </div>
    <div class="options">
-      <a href="assignments.php">Assignments</a>
+      <a href="prove02.php">Go back!</a>
    </div>
    <hr>
    <p>This is the body stuff</p>

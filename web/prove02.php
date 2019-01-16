@@ -4,6 +4,7 @@
    <title>Home Page</title>
    <link rel="stylesheet" type="text/css" href="squidward.css">
 </head>
+<!-- Have a typical navbar on top that floats, then have a big backdrop picture of something musical? -->
 <body>
    <h1>Home page yo!</h1>
    <div class="header">

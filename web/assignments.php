@@ -5,7 +5,7 @@
    <link rel="stylesheet" type="text/css" href="squidward.css">
 </head>
 <body>
-   <h1>Assignments yo!!</h1>
+   <h1>Assignments</h1>
    <div class="header">
       <p>Cool Stuff Coming Soon (I think...?)</p>
    </div>
@@ -13,6 +13,5 @@
       include 'header.php';
    ?>
    <hr>
-   <p>This is the body stuff</p>
 </body>
 </html>

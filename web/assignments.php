@@ -9,9 +9,9 @@
    <div class="header">
       <p>Cool Stuff Coming Soon (I think...?)</p>
    </div>
-   <div class="options">
-      <a href="prove02.php">Go back!</a>
-   </div>
+   <?php
+      include 'header.php';
+   ?>
    <hr>
    <p>This is the body stuff</p>
 </body>

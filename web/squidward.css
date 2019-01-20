@@ -9,7 +9,7 @@ html {
 * {
    font-family: "Trebuchet MS", Helvetica, sans-serif;
    text-align: center;
-   text-decoration-color: white;
+   color: #FEFEFE;              /*white*/
 }
 
 .header {

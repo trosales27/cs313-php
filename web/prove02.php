@@ -6,7 +6,7 @@
 </head>
 
 <body>
-   <h1>Home page yo!</h1>
+   <h1>Home Page</h1>
    <div class="header">
       <p>CS313</p>
    </div>
@@ -15,7 +15,7 @@
    ?>
    <p>The alphabet is very diifficult to learn<br>
    This will help</p>
-   <iframe width="420" height="315"
+   <iframe width="709" height="397.13"
    src=https://www.youtube.com/watch?v=g02WKrWjUgA>
    </iframe>
    <!-- Still needs an IMage and some php stuff -->

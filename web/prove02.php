@@ -6,7 +6,7 @@
 </head>
 <!-- Have a typical navbar on top that floats, then have a big backdrop picture of something musical? -->
 <body>
-   <?php>/*Inlcude a header thign here for navbar*/
+   <?php>
    <?>
    <h1>Home page yo!</h1>
    <div class="header">

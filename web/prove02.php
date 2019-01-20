@@ -13,11 +13,10 @@
    <?php
       include 'header.php';
    ?>
+   <br><br>
    <p>The alphabet is very diifficult to learn<br>
    This will help</p>
-   <iframe width="709" height="397.13"
-   src=https://www.youtube.com/watch?v=g02WKrWjUgA>
-   </iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/g02WKrWjUgA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
    <!-- Still needs an IMage and some php stuff -->
 </body>
 </html>

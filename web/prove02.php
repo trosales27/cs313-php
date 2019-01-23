@@ -13,7 +13,6 @@
    <div class="options">
       <a href="assignments.php">Assignments</a>
    </div>
-   <hr>
    <p>This is the body stuff</p>
 </body>
 </html>

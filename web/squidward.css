@@ -1,6 +1,15 @@
+html {
+  background: url(piano.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 * {
    font-family: "Trebuchet MS", Helvetica, sans-serif;
    text-align: center;
+   color: white;
 }
 
 .header {
@@ -11,7 +20,7 @@
 
 .options {
    overflow: hidden;
-   background-color: #333;
+   background-color: transparent;
 }
 
 .options a {

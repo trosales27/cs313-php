@@ -5,14 +5,13 @@
    <link rel="stylesheet" type="text/css" href="squidward.css">
 </head>
 <body>
-   <h1>Assignments yo!!</h1>
+   <h1>Assignments</h1>
    <div class="header">
       <p>Cool Stuff Coming Soon (I think...?)</p>
    </div>
-   <div class="options">
-      <a href="prove02.php">Go back!</a>
-   </div>
+   <?php
+      include 'header.php';
+   ?>
    <hr>
-   <p>This is the body stuff</p>
 </body>
 </html>

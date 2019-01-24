@@ -1,7 +1,6 @@
 * {
    font-family: "Trebuchet MS", Helvetica, sans-serif;
    text-align: center;
-   color: white;
 }
 
 .header {
@@ -11,8 +10,8 @@
 }
 
 .options {
-  /* overflow: hidden;
-   background-color: transparent;*/
+   overflow: hidden;
+   background-color: transparent;
 }
 
 .options a {

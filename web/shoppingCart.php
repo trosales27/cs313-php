@@ -11,7 +11,6 @@
 		<form>
 			<div class="row">
 				<a>This is an anchor</a>
-				<p>This is aparagraph</p>
 				<a>another anchor</a>
 			</div>
 		</form>

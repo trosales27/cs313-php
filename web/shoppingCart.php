@@ -9,7 +9,11 @@
 	<hr>
 	<p>This will be a list of items, with a form to check items to add to cart</p>
 		<form>
-			<p>This is in the form</p>
+			<div id="row">
+				<a>This is an anchor</a>
+				<p>This is aparagraph</p>
+				<a>another anchor</a>
+			</div>
 		</form>
 </body>
 </html>

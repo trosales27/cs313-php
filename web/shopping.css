@@ -27,3 +27,10 @@
   background-color: #ddd;
   color: black;
 }
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center /*flex-start flex-end space-around*/;
+  align-items: center/*flex-start flex-end space-around*/;
+}

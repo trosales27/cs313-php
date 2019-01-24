@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="squidward.css">
+	<link rel="stylesheet" type="text/css" href="shopping.css">
 </head>
 
 <body>

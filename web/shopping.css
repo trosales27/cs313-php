@@ -1,0 +1,30 @@
+* {
+   font-family: "Trebuchet MS", Helvetica, sans-serif;
+   text-align: center;
+   color: white;
+}
+
+.header {
+   text-align: center;
+   font-size: 18px;
+   padding: 4;
+}
+
+.options {
+   overflow: hidden;
+   background-color: transparent;
+}
+
+.options a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.options a:hover {
+  background-color: #ddd;
+  color: black;
+}

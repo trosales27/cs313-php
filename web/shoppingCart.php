@@ -1,7 +1,15 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="shopping.css">
+	<script type="text/javascript">
+		function addToCart() {
+			alert("Sent to database?");
+		}
+	</script>
 </head>
 
 <body>
@@ -10,8 +18,10 @@
 	<p>This will be a list of items, with a form to check items to add to cart</p>
 		<form>
 			<div class="row">
-				<a>This is an anchor</a>
-				<a>another anchor</a>
+				<div><button onclick="addToCart()">Add to Cart</button></div>
+				<div><button onclick="addToCart()">Add to Cart</button></div>
+				<div><button onclick="addToCart()">Add to Cart</button></div>
+				<div><button onclick="addToCart()">Add to Cart</button></div>
 			</div>
 		</form>
 </body>

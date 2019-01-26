@@ -48,3 +48,8 @@
 /*.row a:hover {*/
   /*make image a lil bigger*/
 /**/
+
+img {
+  width: 30%;
+  height: 30%;
+}

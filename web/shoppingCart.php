@@ -7,7 +7,6 @@
 	<link rel="stylesheet" type="text/css" href="shopping.css">
 	<script type="text/javascript">
 		function addToCart() {
-			alert("Sent to database?");
 		}
 	</script>
 </head>
@@ -18,7 +17,7 @@
 	<p>This will be a list of items, with a form to check items to add to cart</p>
 		<form>
 			<div class="row">
-				<div><button onclick="addToCart()">Add to Cart</button></div>
+				<div name="name1"><button onclick="addToCart()">Add to Cart</button>
 				<div><button onclick="addToCart()">Add to Cart</button></div>
 				<div><button onclick="addToCart()">Add to Cart</button></div>
 				<div><button onclick="addToCart()">Add to Cart</button></div>

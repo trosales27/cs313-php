@@ -13,7 +13,7 @@
 	<p>This will be a list of items, with a form to check items to add to cart</p>
 		<div class="row">
 			<form action="addCart.php" method="post">
-				<img src="continuum.jpg" alt="continuum keyboard">
+				<img src="continuum.jpg" alt="continuum keyboard"><br>
 				<button type="submit">Add to Cart</button>
 			</form>
 			<br>

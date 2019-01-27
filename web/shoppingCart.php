@@ -8,8 +8,7 @@
 </head>
 
 <body>
-	<h1>The Music Store (*More creative name coming soon)</h1>
-	<hr>
+	<?php include 'shoppingHeader.php;' ?>
 	<p>This will be a list of items, with a form to check items to add to cart</p>
 		<div class="row">
 			<div>

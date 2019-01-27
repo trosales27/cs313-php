@@ -5,8 +5,11 @@
 
 	if (sizeof($cart) == 0)
 		$cart = array();
-	else 
-		$cart = $_SESSION['cart'];
+	else {
+		foreach ($_SESSION['cart'] as $item) {
+			array_push($cart, $item);
+		}
+	}
 
 	array_push($cart, $_POST["item"]);
 	$_SESSION['cart'] = $cart;

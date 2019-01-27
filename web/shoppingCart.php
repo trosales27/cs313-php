@@ -8,7 +8,12 @@
 </head>
 
 <body>
-	<?php include 'shoppingHeader.php;' ?>
+	<h1>The Music Store (*More creative name coming soon)</h1>
+	<div class="cart">
+		<div class='numberCircle'>
+			<?php echo sizeof($_SESSION['cart']); ?>
+		</div>
+	<hr>
 	<p>This will be a list of items, with a form to check items to add to cart</p>
 		<div class="row">
 			<div>

@@ -57,12 +57,20 @@ img {
 .numberCircle {
   float: right;
   border-radius: 50%;
-  width: 36px;
-  height: 36px;
+  width: 12px;
+  height: 12px;
   padding: 8px;
-  background: #fff;
-  border: 2px solid #666;
-  color: #666;
+  background: rgb(248, 0, 0);
+  border: 1px solid rgb(248, 0, 0);
+  color: rgb(255, 255, 255);
   text-align: center;
-  font: 32px Arial, sans-serif;
+  font: 14px Arial, sans-serif;
+}
+
+.cart {
+  /* position: absolute; */
+  top: 2%;
+  right: 1%;
+  padding-right: 3%;
+  color: black;
 }

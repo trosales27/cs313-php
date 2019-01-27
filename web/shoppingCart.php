@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>The Music Store</title>
 	<link rel="stylesheet" type="text/css" href="shopping.css">
 </head>
 

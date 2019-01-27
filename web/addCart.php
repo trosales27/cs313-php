@@ -2,7 +2,7 @@
 	session_start();
 
 	print_r($_POST);
-	if (sizeof($cart) == 0)
+	if (sizeof($cart) <= 0)
 		$cart = array();
 	else {
 		foreach ($_SESSION['cart'] as $item) {

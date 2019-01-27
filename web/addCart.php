@@ -4,17 +4,13 @@
 	echo "session array is: \n";
 	echo $_SESSION['array'];
 
-	print_r($_POST);
-	if (sizeof($cart) <= 0)
 		$cart = array();
-	else {
-		echo "IT'S GREATER THAN 1\n";
+	if (sizeof($_SESSION['cart']) > 0) {
 		foreach ($_SESSION['cart'] as $item) {
 			array_push($cart, $item);
 		}
 	}
 
-	echo "Cart is: ";
 	foreach($cart as $item) {
 		echo $item . "<br>";
 	}

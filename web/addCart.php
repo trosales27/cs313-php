@@ -10,12 +10,16 @@
 		}
 	}
 
-	array_push($cart, $_POST["item"]);
-	$_SESSION['cart'] = $cart;
 	echo "Cart is: ";
 	foreach($cart as $item) {
 		echo $item . "<br>";
 	}
+	array_push($cart, $_POST["item"]);
+	$_SESSION['cart'] = $cart;
+	echo "Cart is: now";
+	foreach($cart as $item) {
+		echo $item . "<br>";
+	}
 	echo "cart size is: " . sizeof($cart);
-	header('Location: shoppingCart.php');
+	//header('Location: shoppingCart.php');
 ?>

@@ -69,8 +69,14 @@ img {
 
 .cart {
   /* position: absolute; */
+  text-decoration: none;
+  text-decoration-color: rgb(0, 0, 0);
   top: 2%;
   right: 1%;
+  text-align: right;
   padding-right: 3%;
   color: black;
+}
+
+.label {
 }

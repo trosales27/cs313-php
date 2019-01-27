@@ -9,10 +9,12 @@
 
 <body>
 	<h1>The Music Store (*More creative name coming soon)</h1>
-	<div class="cart">
+	<a href="cart.php">
+	<div class="cart">Cart: 
 		<div class='numberCircle'>
 			<?php echo sizeof($_SESSION['cart']) ; ?>
 		</div>
+	</a>
 	<hr>
 	<p>This will be a list of items, with a form to check items to add to cart</p>
 		<div class="row">

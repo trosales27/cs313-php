@@ -21,8 +21,6 @@
 		echo $item . "<br>";
 	}
 	echo "cart size is: " . sizeof($cart);
-
-	//echo "<a href='shoppingCart.php'>Go back!</a>";
-
+	
 	header('Location: shoppingCart.php');
 ?>

@@ -1,6 +1,9 @@
 <?php
 	session_start();
 
+	echo "session array is: \n";
+	echo $_SESSION['array'];
+
 	print_r($_POST);
 	if (sizeof($cart) <= 0)
 		$cart = array();

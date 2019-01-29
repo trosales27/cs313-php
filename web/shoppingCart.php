@@ -4,12 +4,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>The Music Store</title>
+	<title>Keys R US</title>
 	<link rel="stylesheet" type="text/css" href="shopping.css">
 </head>
 
 <body>
-	<h1>The Music Store (*More creative name coming soon)</h1>
+	<a href="shoppingCart.php"><h1>Keys R US</h1></a>
 	<a href="cart.php">
 	<div class="cart">Cart: 
 		<div class='numberCircle'>

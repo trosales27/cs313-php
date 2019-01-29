@@ -80,3 +80,8 @@ img {
 
 .label {
 }
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}

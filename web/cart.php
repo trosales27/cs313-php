@@ -13,7 +13,7 @@ session_start();
     <script src="main.js"></script>
     </head>
     <body>
-    <h1>The Music Store (*More creative name coming soon)</h1>
+    <a href="shoppingCart.php"><h1>Keys R Us</h1></a>
 	<a href="cart.php">
 	<div class="cart">Cart: 
 		<div class='numberCircle'>
@@ -23,6 +23,7 @@ session_start();
     <hr>
     <h2>Your Cart:</h2>
     <?php
+    echo "Your cart: <br>";
         foreach($cart as $item) {
 		    echo $item . "<br>";
 	}

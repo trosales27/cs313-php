@@ -2,19 +2,18 @@
 session_start();
     //echo "REMOVING FROM CART\n";
 
-    print_r($_POST);
+    //print_r($_POST);
     
-	echo "Cart is: ";
+	echo "Cart is: <br>";
 	foreach($_SESSION['cart'] as $item) {
 		echo $item . "<br>";
 	}
-    echo "cart size is: " . sizeof($_SESSION['cart']);
+    echo "cart size is: " . sizeof($_SESSION['cart']) . "<br>";
     
-	array_push($cart, $_POST["item"]);
-	$_SESSION['cart'] = $cart;
+	//array_push($cart, $_POST["item"]);
+	//$_SESSION['cart'] = $cart;
 
 
-    echo "cart size is:" . sizeof($_SESSION['cart']);
 	if (sizeof($_SESSION['cart']) > 0) {
 		foreach ($_SESSION['cart'] as $item) {
             echo "Item is $item <br>";
@@ -27,11 +26,11 @@ session_start();
         }
     } 
 
-	echo "Cart is now: ";
-	foreach($_SESSION['cart'] as $item) {
-		echo $item . "<br>";
-	}
-	echo "cart size is: " . sizeof($_SESSION['cart']) . "<br>";
+	// echo "Cart is now: ";
+	// foreach($_SESSION['cart'] as $item) {
+	// 	echo $item . "<br>";
+	// }
+	// echo "cart size is: " . sizeof($_SESSION['cart']) . "<br>";
     
 	//header('Location: cart.php');
 

@@ -28,7 +28,8 @@ session_start();
         foreach($_SESSION['cart'] as $item) {
             echo "<form action='removeCart.php' method='post'>
             <input type='hidden' value=$index name='index'><tr><td>$item</td><td>
-            <button type='submit'>remove</button></td></tr>";
+            <button type='submit'>remove</button></td></tr>
+            </form>";
             $index += 1;
     }
     echo "</table>"

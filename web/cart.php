@@ -16,17 +16,15 @@ session_start();
 
     <body>
     <?php include 'shoppingHeader.php'; ?>
-    
+
     <h2>Your Cart:</h2>
     <?php
-    $index = 0;
     echo "<table>";
         foreach($_SESSION['cart'] as $item) {
             echo "<form action='removeCart.php' method='post'>
-            <input type='hidden' value=$index name='index'><tr><td>$item</td><td>
+            <input type='hidden' value=$item name='item'><tr><td>$item</td><td>
             <button type='submit'>remove</button></td></tr>
             </form>";
-            $index += 1;
     }
     echo "</table>"
     ?>

@@ -10,6 +10,10 @@
 </head>
 <body>
 
+<?php
+session_unset();
+?>
+
 <h2>Purchase Succesful!<h2>
     
 </body>

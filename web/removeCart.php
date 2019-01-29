@@ -3,20 +3,20 @@
     echo "REMOVING FROM CART\n";
 
     print_r($_POST);
-	// $cart = array();
-	// if (sizeof($_SESSION['cart']) > 0) {
-	// 	foreach ($_SESSION['cart'] as $item) {
-	// 		array_push($cart, $item);
-	// 	}
-	// }
+	$cart = array();
+	if (sizeof($_SESSION['cart']) > 0) {
+		foreach ($_SESSION['cart'] as $item) {
+			array_push($cart, $item);
+		}
+	}
 
-	// foreach($cart as $item) {
-	// 	echo $item . "<br>";
-	// }
-	// array_push($cart, $_POST["item"]);
-	// $_SESSION['cart'] = $cart;
+	foreach($cart as $item) {
+		echo $item . "<br>";
+	}
+	array_push($cart, $_POST["item"]);
+	$_SESSION['cart'] = $cart;
 
 	
-	//eader('Location: cart.php');
+	eader('Location: cart.php');
 
 ?>

@@ -14,6 +14,7 @@ session_start();
 	$_SESSION['cart'] = $cart;
 
 
+    echo "cart size is:" . sizeof($_SESSION['cart']);
 	if (sizeof($_SESSION['cart']) > 0) {
 		foreach ($_SESSION['cart'] as $item) {
             echo "Item is $item <br>";

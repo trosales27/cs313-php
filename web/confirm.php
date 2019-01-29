@@ -16,12 +16,10 @@ session_start();
 <table>
 <?php 
     foreach($_SESSION['cart'] as $item) {
-        echo "<form action='removeCart.php' method='post'>
-        <input type='hidden' value=$index name='index'><tr><td>$item</td><td>
-        <button type='submit'>remove</button></td></tr>";
+        echo "<tr><td>$item</td><td>";
     }
 ?>
-</table><hr>
+</table>
 
 <p>Name: <?php echo $_SESSION['name']; ?></p>
 <p>Address: <?php echo $_SESSION['address']; ?></p>

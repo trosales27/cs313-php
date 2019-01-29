@@ -34,7 +34,7 @@ session_start();
     }
     echo "</table>"
     ?>
-    <form action="confirm.php" method="get"><button type="submit">Complete Purchase</button></form>
+    <form action="checkout.php" method="get"><button type="submit">Complete Purchase</button></form>
         
     </body>
     </html>

@@ -1,4 +1,10 @@
 <?php
-echo "<h1>The Music Store (*More creative name coming soon)</h1>";
-echo "<div class='numberCircle'>*cartNumber*</div><hr>";
+echo "<a href='shoppingCart.php'><h1>Keys R US</h1></a>
+<a href='cart.php'>
+<div class='cart'>Cart: 
+    <div class='numberCircle'>";
+    echo sizeof($_SESSION['cart']);
+echo "</div>
+</a>
+<hr>";
 ?>

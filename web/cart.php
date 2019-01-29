@@ -11,16 +11,12 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="shopping.css" />
     <script src="main.js"></script>
-    </head>
+</head>
+
+
     <body>
-    <a href="shoppingCart.php"><h1>Keys R Us</h1></a>
-	<a href="cart.php">
-	<div class="cart">Cart: 
-		<div class='numberCircle'>
-			<?php echo sizeof($_SESSION['cart']) ; ?>
-		</div>
-    </a>
-    <hr>
+    <?php include 'shoppingHeader.php'; ?>
+    
     <h2>Your Cart:</h2>
     <?php
     $index = 0;

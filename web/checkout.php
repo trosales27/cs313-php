@@ -15,14 +15,8 @@ session_start();
 </head>
 
 <body>
-<a href="shoppingCart.php"><h1>Keys R US</h1></a>
-	<a href="cart.php">
-	<div class="cart">Cart: 
-		<div class='numberCircle'>
-			<?php echo sizeof($_SESSION['cart']) ; ?>
-		</div>
-	</a>
-	<hr>
+<?php include 'shoppingHeader.php'; ?>
+
 <form action="confirm.php" method="post">
 Name:<input type="text" name="name">
 Address:<input type="text" name="address">

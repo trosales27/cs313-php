@@ -9,14 +9,8 @@
 </head>
 
 <body>
-	<a href="shoppingCart.php"><h1>Keys R US</h1></a>
-	<a href="cart.php">
-	<div class="cart">Cart: 
-		<div class='numberCircle'>
-			<?php echo sizeof($_SESSION['cart']) ; ?>
-		</div>
-	</a>
-	<hr>
+<?php include 'shoppingHeader.php'; ?>
+
 	<p>This will be a list of items, with a form to check items to add to cart</p>
 		<div class="row">
 			<div>

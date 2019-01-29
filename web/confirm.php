@@ -11,14 +11,8 @@ session_start();
 </head>
 
 <body>
-<a href="shoppingCart.php"><h1>Keys R US</h1></a>
-	<a href="cart.php">
-	<div class="cart">Cart: 
-		<div class='numberCircle'>
-			<?php echo sizeof($_SESSION['cart']) ; ?>
-		</div>
-	</a>
-	<hr>
+<?php include 'shoppingHeader.php'; ?>
+
 <h3>Does this look correct?</h3>
 
 <h4>Cart:</h4>

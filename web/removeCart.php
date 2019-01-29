@@ -17,6 +17,7 @@ session_start();
 	if (sizeof($_SESSION['cart']) > 0) {
 		foreach ($_SESSION['cart'] as $item) {
             echo "Item is $item <br>";
+            echo "post is: " . $_POST['item'] . "<br>";
             if ($item == $_POST['item']) {
                 echo "Match\n";
                 echo $_SESSION['item'];

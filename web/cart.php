@@ -22,7 +22,7 @@ session_start();
     echo "<table>";
         foreach($_SESSION['cart'] as $item) {
             echo "<form action='removeCart.php' method='post'>
-            <input type='hidden' value=$item name='item'><tr><td>$item</td><td>
+            <input type='hidden' value='$item' name='item'><tr><td>$item</td><td>
             <button type='submit'>remove</button></td></tr>
             </form>";
     }

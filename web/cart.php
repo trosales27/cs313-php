@@ -25,7 +25,7 @@ session_start();
     <?php
     echo "<table>";
         foreach($_SESSION['cart'] as $item) {
-		    echo "<tr><td>$item</td><a href='removeCart.php'>remove</a></tr>";
+		    echo "<tr><td>$item</td><td><a href='removeCart.php'>remove</a></td></tr>";
     }
     echo "</table>"
     ?>

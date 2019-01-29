@@ -16,6 +16,7 @@ session_start();
 
 	if (sizeof($_SESSION['cart']) > 0) {
 		foreach ($_SESSION['cart'] as $item) {
+            echo "Item is $item <br>";
             if ($item == $_POST['item']) {
                 echo "Match\n";
                 echo $_SESSION['item'];
@@ -29,7 +30,7 @@ session_start();
 	foreach($_SESSION['cart'] as $item) {
 		echo $item . "<br>";
 	}
-	echo "cart size is: " . sizeof($_SESSION['cart']);
+	echo "cart size is: " . sizeof($_SESSION['cart']) . "<br>";
     
 	//header('Location: cart.php');
 

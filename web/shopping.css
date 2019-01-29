@@ -96,10 +96,12 @@ table {
   font-size: 18px;
   text-align: center;
   border-bottom: 1px solid black;
+  border-bottom-width: 75%;
 }
 
 tr, td {
   padding: 20px;
   border-bottom: 1px solid black;
+  border-bottom-width: 75%;
 }
 

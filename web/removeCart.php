@@ -13,7 +13,7 @@ session_start();
 	if (sizeof($_SESSION['cart']) > 0) {
 		foreach ($_SESSION['cart'] as $item) {
             if ($item == $_POST['item']) {
-                unset($item);
+                unset($_SESSION[$item]);
                 break;
             }
         }

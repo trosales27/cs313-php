@@ -28,6 +28,7 @@ session_start();
 <p>State: <?php echo $_SESSION['state']; ?></p>
 <p>Zip: <?php echo $_SESSION['zip']; ?></p>
 
-<button onclick="complete.php">Complete Purchase</button>
+
+<form action="complete.php" method="get"><button type="submit">Complete Purchase</button></form>
 </body>
 </html>

@@ -33,8 +33,7 @@ session_start();
     }
     echo "</table>"
     ?>
-    <button onclick="confirm.php">Submit Purchase</button>
-
+    <form action="confirm.php" method="get"><button type="submit">Complete Purchase</button></form>
         
     </body>
     </html>

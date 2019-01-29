@@ -5,13 +5,11 @@ session_start();
     print_r($_POST);
     
 	echo "Cart is: ";
-	foreach($cart as $item) {
+	foreach($_SESSION['cart'] as $item) {
 		echo $item . "<br>";
 	}
-	echo "cart size is: " . sizeof($cart);
+	echo "cart size is: " . sizeof($_SESSION['cart']);
 
-    print_r($_SESSION['cart']);
-	$cart = array();
 	if (sizeof($_SESSION['cart']) > 0) {
 		foreach ($_SESSION['cart'] as $item) {
             if ($item == $_POST['item']) {
@@ -22,10 +20,10 @@ session_start();
     } 
 
 	echo "Cart is now: ";
-	foreach($cart as $item) {
+	foreach($_SESSION['cart'] as $item) {
 		echo $item . "<br>";
 	}
-	echo "cart size is: " . sizeof($cart);
+	echo "cart size is: " . sizeof($_SESSION['cart']);
     
 	//header('Location: cart.php');
 

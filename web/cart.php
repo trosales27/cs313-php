@@ -23,10 +23,11 @@ session_start();
     <hr>
     <h2>Your Cart:</h2>
     <?php
-    echo "Your cart: <br>";
+    echo "Your cart: <br><table>";
         foreach($cart as $item) {
-		    echo $item . "<br>";
-	}
+		    echo "<tr><td>$item</td></tr>";
+    }
+    echo "</table>"
     ?>
 
         

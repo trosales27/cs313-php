@@ -1,5 +1,5 @@
 <?php
-
+session_start();
     //echo "REMOVING FROM CART\n";
 
     print_r($_POST);

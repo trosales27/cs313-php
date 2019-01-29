@@ -33,6 +33,7 @@ session_start();
     }
     echo "</table>"
     ?>
+    <button onclick="confirm.php">Submit Purchase</button>
 
         
     </body>

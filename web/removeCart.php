@@ -1,22 +1,18 @@
 <?php
 
-    echo "REMOVING FROM CART\n";
+    //echo "REMOVING FROM CART\n";
 
     print_r($_POST);
 	$cart = array();
 	if (sizeof($_SESSION['cart']) > 0) {
 		foreach ($_SESSION['cart'] as $item) {
-			array_push($cart, $item);
+            if ($item == $_POST['item']) {
+                unset($item);
+                break;
+            }
 		}
-	}
-
-	foreach($cart as $item) {
-		echo $item . "<br>";
-	}
-	array_push($cart, $_POST["item"]);
-	$_SESSION['cart'] = $cart;
-
-	
-	eader('Location: cart.php');
+    } 
+    
+	header('Location: cart.php');
 
 ?>

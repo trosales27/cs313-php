@@ -9,7 +9,16 @@ session_start();
 <title>Confirmation</title>
 <link rel="stylesheet" type="text/css" media="screen" href="shopping.css"/>
 </head>
+
 <body>
+<a href="shoppingCart.php"><h1>Keys R US</h1></a>
+	<a href="cart.php">
+	<div class="cart">Cart: 
+		<div class='numberCircle'>
+			<?php echo sizeof($_SESSION['cart']) ; ?>
+		</div>
+	</a>
+	<hr>
 <h3>Does this look correct?</h3>
 
 <h4>Cart:</h4>

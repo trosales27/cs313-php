@@ -13,8 +13,16 @@ session_start();
     <link rel="stylesheet" type="text/css" media="screen" href="shopping.css" />
     <script src="main.js"></script>
 </head>
-<body>
 
+<body>
+<a href="shoppingCart.php"><h1>Keys R US</h1></a>
+	<a href="cart.php">
+	<div class="cart">Cart: 
+		<div class='numberCircle'>
+			<?php echo sizeof($_SESSION['cart']) ; ?>
+		</div>
+	</a>
+	<hr>
 <form action="confirm.php" method="post">
 Name:<input type="text" name="name">
 Address:<input type="text" name="address">

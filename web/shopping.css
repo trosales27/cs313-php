@@ -89,3 +89,13 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+
+table {
+  font-size: 18px;
+  text-align: center;
+  border-bottom: rgb(0, 0, 0);
+}
+
+tr {
+  border-bottom: rgb(0, 0, 0);
+}

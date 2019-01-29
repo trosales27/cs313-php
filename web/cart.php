@@ -23,7 +23,7 @@ session_start();
     <hr>
     <h2>Your Cart:</h2>
     <?php
-    echo "Your cart: <br><table>";
+    echo "<table>";
         foreach($_SESSION['cart'] as $item) {
 		    echo "<tr><td>$item</td></tr>";
     }

@@ -23,9 +23,13 @@ session_start();
     <hr>
     <h2>Your Cart:</h2>
     <?php
+    $index = 0;
     echo "<table>";
         foreach($_SESSION['cart'] as $item) {
-		    echo "<tr><td>$item</td><td><a href='removeCart.php'>remove</a></td></tr>";
+            echo "<form action='removeCart.php' method='post'>
+            <input type='hidden' value=$index name='index'><tr><td>$item</td><td>
+            <button type='submit'>remove</button></td></tr>";
+            $index += 1;
     }
     echo "</table>"
     ?>

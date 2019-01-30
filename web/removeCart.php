@@ -10,10 +10,13 @@ session_start();
 	//array_push($cart, $_POST["item"]);
 	//$_SESSION['cart'] = $cart;
 
+	echo "Cart is: ";
+	foreach($_SESSION['cart'] as $item) {
+		echo $item . "<br>";
+	}
+
 	if (sizeof($_SESSION['cart']) > 0) {
 		foreach ($_SESSION['cart'] as $item) {
-            //echo "Item is $item <br>";
-            //echo "post is: " . $_POST['item'] . "<br>";
             if ($item == $_POST['item']) {
                 //echo "Match\n";
                 //echo $_SESSION['item'];
@@ -23,12 +26,12 @@ session_start();
         }
     } 
 
-	// echo "Cart is now: ";
-	// foreach($_SESSION['cart'] as $item) {
-	// 	echo $item . "<br>";
-	// }
-	// echo "cart size is: " . sizeof($_SESSION['cart']) . "<br>";
+	echo "Cart is now: ";
+	foreach($_SESSION['cart'] as $item) {
+		echo $item . "<br>";
+	}
+	//echo "cart size is: " . sizeof($_SESSION['cart']) . "<br>";
     
-	header('Location: cart.php');
+	//header('Location: cart.php');
 
 ?>

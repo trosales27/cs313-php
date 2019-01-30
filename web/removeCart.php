@@ -1,17 +1,17 @@
 <?php
 session_start();
     
+echo "Session cart is: ";
+foreach ($_SESSION['cart'] as $item) {
+    echo $item . "<br>";
+}
+
     $cart = array();
 	if (sizeof($_SESSION['cart']) > 0) {
 		foreach ($_SESSION['cart'] as $item) {
 			array_push($cart, $item);
 		}
     }
-    
-    echo "Cart is: ";
-	foreach($cart as $item) {
-		echo $item . "<br>";
-	}
 
 	// array_push($cart, $_POST["item"]);
 	// $_SESSION['cart'] = $cart;
@@ -20,11 +20,12 @@ session_start();
         unset($cart[$key]);
     }
 
+    $_SESSION['cart'] = $cart;
 
-	echo "Cart is: ";
-	foreach($cart as $item) {
-		echo $item . "<br>";
-	}
+    echo "Session cart is now: ";
+    foreach ($_SESSION['cart'] as $item) {
+        echo $item . "<br>";
+    }
 
 	// if (sizeof($_SESSION['cart']) > 0) {
 	// 	foreach ($_SESSION['cart'] as $item) {

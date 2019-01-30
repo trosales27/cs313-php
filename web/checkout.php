@@ -18,12 +18,14 @@ session_start();
 <?php include 'shoppingHeader.php'; ?>
 
 <form action="confirm.php" method="post">
-Name:<input type="text" name="name">
+First Name:<input type="text" name="fname"> 
+Last Name:<input type="text" name="lname"><br><br>
 Address:<input type="text" name="address">
-City: <input type="text" name="city">
-State: <input type="text" name="state">
-Zip: <input type="text" name="zip">
+City: <input type="text" name="city"><br><br>
+State: <input type="text" name="state" maxlength=2 width=3>
+Zip: <input type="text" name="zip"><br><br>
 <button type="submit">Complete Purchase</button>
+<a href="cart.php"><button type="button" onclick="">Return to Cart</button></a>
 </form>
     
 </body>

@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+$fname = htmlspecialchars($_POST["fname"]);
+$lname = htmlspecialchars($_POST["lname"]);
+$address = htmlspecialchars($_POST["address"]);
+$state = htmlspecialchars($_POST["state"]);
+$zip = htmlspecialchars($_POST["zip"]);
 ?>
 
 <!DOCTYPE html>
@@ -24,10 +29,10 @@ session_start();
 ?>
 </table>
 
-<p>Name: <?php echo $_SESSION['name']; ?></p>
-<p>Address: <?php echo $_SESSION['address']; ?></p>
-<p>State: <?php echo $_SESSION['state']; ?></p>
-<p>Zip: <?php echo $_SESSION['zip']; ?></p>
+<p>First Name: <?php echo $fname; ?> <p>Last Name: <?php echo $lname; ?></p>
+<p>Address: <?php echo $address; ?></p>
+<p>State: <?php echo $state; ?></p>
+<p>Zip: <?php echo $zip; ?></p>
 
 
 <form action="complete.php" method="get"><button type="submit">Complete Purchase</button></form>

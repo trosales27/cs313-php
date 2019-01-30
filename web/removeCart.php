@@ -44,6 +44,6 @@ foreach ($_SESSION['cart'] as $item) {
 	// }
 	//echo "cart size is: " . sizeof($_SESSION['cart']) . "<br>";
     
-	//header('Location: cart.php');
+	header('Location: cart.php');
 
 ?>

@@ -30,11 +30,22 @@ catch (PDOException $ex)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Scripture Resources</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="squidward.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="shopping.css" />
     <script src="main.js"></script>
 </head>
 <body>
 <h2>Scripture Resources</h2>
+
+<?php
+foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
+{
+  echo 'book: ' . $row['book'];
+  echo 'chapter: ' . $row['chapter'];
+  echo 'verse: ' . $row['verse'];
+  echo 'content: ' . $row['content'];
+  echo '<br/>';
+}
+?>
     
 </body>
 </html>

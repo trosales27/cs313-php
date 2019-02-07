@@ -105,3 +105,7 @@ tr, td {
   border-bottom-width: 75%;
 }
 
+.bold {
+  font-weight: bold;
+}
+

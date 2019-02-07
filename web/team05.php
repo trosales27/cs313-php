@@ -39,7 +39,8 @@ catch (PDOException $ex)
 <?php
 foreach ($db->query('SELECT book, chapter, verse, content FROM scriptures') as $row)
 {
-  echo $row['book'] . ' ' . $row['chapter'] .  ':' . $row['verse'] . ' - ' . $row['content'] . '<br>';
+  echo "<span class='bold'>" . $row['book'] . ' ' . $row['chapter'] .  ':' . $row['verse'] . 
+  "</span>" . ' - ' . $row['content'] . '<br>';
 }
 ?>
     

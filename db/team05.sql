@@ -5,7 +5,7 @@ CREATE TABLE scriptures(id SERIAL PRIMARY KEY,
 	content VARCHAR(300));
 
 INSERT INTO scriptures(book, chapter, verse, content) VALUES ('John', 1, 5, 
-	'And the alight shineth in bdarkness; and the darkness ccomprehended it not.');
+	'And the light shineth in darkness; and the darkness comprehended it not.');
 INSERT INTO scriptures(book, chapter, verse, content) VALUES ('Doctrine and Covenants', 
 	88, 49, 'The light shineth in darkness, and the darkness comprehendeth it not; 
 	nevertheless, the day shall come when you shall comprehend even God, being quickened 

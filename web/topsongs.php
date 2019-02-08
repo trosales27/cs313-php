@@ -35,15 +35,17 @@ catch (PDOException $ex)
 <body>
 
 <h2>Top Songs</h2>
+<hr><br>
+<h3>Genre's:</h3>
+<hr width=60%>
 <?php
 echo "Genre's: <br>";
 foreach ($db->query('SELECT genre_name FROM genre') as $row)
 {
-  echo $row['genre_name'] . '<br>';
+    echo "<div class=row>" . $row['genre_name'] . "</div>";
 }
 
 ?>
-
 <hr>
 <?php
 foreach ($db->query('SELECT song_name, album, artist, rating FROM song_info') as $row)

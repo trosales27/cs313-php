@@ -29,7 +29,7 @@ catch (PDOException $ex)
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Top Songs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="shopping.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="music.css" />
     <script src="main.js"></script>
 </head>
 <body>
@@ -42,7 +42,7 @@ catch (PDOException $ex)
 echo "Genre's: <br>";
 foreach ($db->query('SELECT genre_name FROM genre') as $row)
 {
-    echo "<div class=row>" . $row['genre_name'] . "</div>";
+    echo "<div class=genre>" . $row['genre_name'] . "</div>";
 }
 
 ?>

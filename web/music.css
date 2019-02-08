@@ -1,0 +1,14 @@
+* {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-align: center;
+}
+
+.genre {
+    display: flex;
+}
+ .genre > div {
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+ }

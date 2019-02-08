@@ -6,11 +6,12 @@
 .genre {
     display: flex;
     align-content: center;
+    width: 100%;
     background-color: DodgerBlue;
 }
  .genre > div {
     /* padding: 1%; */
-    width: 80%;
+    width: 50%;
     height: 2%;
     /* margin: 1%; */
     text-align: center;

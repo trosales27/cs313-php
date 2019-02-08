@@ -5,10 +5,14 @@
 
 .genre {
     display: flex;
+    align-content: center;
+    background-color: DodgerBlue;
 }
  .genre > div {
+    padding: 50px;
     width: 100px;
     margin: 10px;
     text-align: center;
     line-height: 75px;
+    background-color: #f1f1f1;
  }

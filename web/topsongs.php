@@ -19,13 +19,13 @@
 <hr width=60%>
 <div class='genre'>
 <?php
-foreach ($db->query('SELECT genre_name FROM genre') as $row)
+foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 {
     echo "<div class='dropdown'>" . "<span>" . $row['genre_name'] . "</span>" . "<div class='dropdown-content'>" . 
     "<p>";
-    if ($row['genre'] == 1) { echo "$genres[1]"; }
-    elseif ($row['genre'] == 2) { echo "$genres[2]"; }
-    elseif ($row['genre'] == 3) { echo "$genres[3]"; }
+    if ($row['genre_id'] == 1) { echo "$genres[1]"; }
+    elseif ($row['genre_id'] == 2) { echo "$genres[2]"; }
+    elseif ($row['genre_id'] == 3) { echo "$genres[3]"; }
     
     echo "</p></div></div>";
 }

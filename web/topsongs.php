@@ -35,11 +35,11 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 </div>
 <hr>
 <?php
-foreach ($db->query('SELECT song_name, album, artist, rating FROM song_info') as $row)
-{
-  echo $row['song_name'] . ' ' . $row['album'] .  ':' . $row['artist'] . 
-  ' - ' . $row['rating'] . '<br>';
-}
+// foreach ($db->query('SELECT song_name, album, artist, rating FROM song_info') as $row)
+// {
+//   echo $row['song_name'] . ' ' . $row['album'] .  ':' . $row['artist'] . 
+//   ' - ' . $row['rating'] . '<br>';
+// }
 
 ?>
     

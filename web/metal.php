@@ -1,6 +1,7 @@
 <?php
 //METAL
 ?>
+<?php include 'load_songs.php' ;?>
 
 <!DOCTYPE html>
 <html>
@@ -13,10 +14,9 @@
     <script src="main.js"></script>
 </head>
 <body>
-    
-<?php include 'top_songs_header.php'; ?>
 
-<h2>Top Metal Songs:</h2>
+<?php include 'top_songs_header.php'; ?>
+<h2>Top Rock Songs:</h2>
 <table>
 <th>Name</th><th>Artist</th><th>Album</th><th>rating</th>
 <?php

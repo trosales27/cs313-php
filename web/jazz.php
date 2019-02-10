@@ -21,6 +21,7 @@
 <?php
 foreach ($db->query('SELECT song_name, album, artist, rating FROM song_info WHERE genre = 3') as $song)
 {
+    echo "IN THE LOOP";
     echo "<tr><td>" . $song['song_name'] . "</td><td>" . $song['artist'] . "</td><td>" . $song['album']
     . "</td><td>" . $song['rating'] . "</td></tr>";
 }

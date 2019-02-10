@@ -46,7 +46,13 @@
     padding-right: 3%;
     color: blue;
   }
-  
+
 a {
   text-decoration: none;
+  color: black;
+}
+
+table {
+  text-align: center;
+  border-bottom: 4px solid black;
 }

@@ -23,14 +23,15 @@ foreach ($db->query('SELECT genre_name FROM genre') as $row)
 {
     echo "<div class='dropdown'>" . "<span>" . $row['genre_name'] . "</span>" . "<div class='dropdown-content'>" . 
     "<p>"; 
-    foreach ($db->query('SELECT song_name, album, artist, rating FROM song_info WHERE genre = $row[genre_id]') as $song)
-    {
-      echo $song['song_name'] . ' ' . $song['album'] .  ':' . $song['artist'] . 
-      ' - ' . $song['rating'] . '<br>';
-    } 
+    
     echo "</p></div></div>";
 }
 
+// foreach ($db->query('SELECT song_name, album, artist, rating FROM song_info WHERE genre = $row[genre_id]') as $song)
+//     {
+//       echo $song['song_name'] . ' ' . $song['album'] .  ':' . $song['artist'] . 
+//       ' - ' . $song['rating'] . '<br>';
+//     } 
 ?>
 </div>
 <hr>

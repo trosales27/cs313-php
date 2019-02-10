@@ -39,6 +39,11 @@ $genres = array();
       $genres[3] = $song['song_name'];
     }
 
+    foreach ($genres as $thing) 
+    {
+        echo "this is: $thing <br>";
+    }
+
 echo "array is: " . $genres;
 
 // $genres = array();

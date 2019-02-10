@@ -46,3 +46,7 @@
     padding-right: 3%;
     color: blue;
   }
+  
+a {
+  text-decoration: none;
+}

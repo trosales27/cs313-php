@@ -23,9 +23,15 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 {
     echo "<div class='dropdown'>" . "<span>" . $row['genre_name'] . "</span>" . "<div class='dropdown-content'>" . 
     "<p>";
-    if ($row['genre_id'] == 1) { echo "$genres[1]"; }
-    elseif ($row['genre_id'] == 2) { echo "$genres[2]"; }
-    elseif ($row['genre_id'] == 3) { echo "$genres[3]"; }
+    if ($row['genre_id'] == 1) { 
+      foreach ($genres[1] as $title) { echo $title . "<br>"; } 
+    }
+    elseif ($row['genre_id'] == 2) { 
+      foreach ($genres[1] as $title) { echo $title . "<br>"; } 
+    }
+    elseif ($row['genre_id'] == 3) { 
+      foreach ($genres[1] as $title) { echo $title . "<br>"; } 
+    }
     
     echo "</p></div></div>";
 }

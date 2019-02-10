@@ -21,13 +21,15 @@ catch (PDOException $ex)
   die();
 }
 
- foreach ($db->query('SELECT genre_name FROM genre') as $row)  
- {
-     foreach($db->query('SELECT song_name FROM song_info WHERE genre = $row[genre_id] ') as $song) {
-         echo "song is: " . $song;
-     }
-}
+//  foreach ($db->query('SELECT genre_name FROM genre') as $row)  
+//  {
+//    echo "Row is: " . $row['genre_name'] . '<br>';
+//   }
 
+// foreach($db->query('SELECT song_name FROM song_info') as $song) {
+//   echo "song is: " . $song['song_name'] . '<br>';
+// }
 
+$variable = 5;
 
 ?>

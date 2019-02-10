@@ -23,7 +23,7 @@ catch (PDOException $ex)
 
 
 $genres = array();
- foreach ($db->query('SELECT song_name, album, artist, rating FROM song_info WHERE genre = Rock') as $song)
+ foreach ($db->query('SELECT song_name, album, artist, rating FROM song_info WHERE genre = 1') as $song)
     {
       echo $song['song_name'];
       $genres[1] = $song['song_name'];

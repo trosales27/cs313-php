@@ -25,7 +25,7 @@ catch (PDOException $ex)
  {
    echo "Row is: " . $row['genre_name'] . '<br>';
      foreach($db->query('SELECT song_name FROM song_info WHERE genre = $row[genre_id] ') as $song) {
-         echo "song is: " . $song[song_name] . '<br>';
+         echo "song is: " . $song['song_name'] . '<br>';
      }
 }
 ?>

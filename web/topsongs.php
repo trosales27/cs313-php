@@ -21,7 +21,7 @@
 <?php
 foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 {
-  $link = $row['genre_name'] . ".php";
+  $link = strtolower($row['genre_name']) . ".php";
     echo "<a href=$link><div class='dropdown'>" . "<span>" . $row['genre_name'] . "</span></a>" . "<div class='dropdown-content'>" . 
     "<p>";
     if ($row['genre_id'] == 1) { echo $genres[1]; } 

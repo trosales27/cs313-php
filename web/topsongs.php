@@ -21,20 +21,16 @@
 <?php
 foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 {
-    echo "<div class='dropdown'>" . "<span>" . $row['genre_name'] . "</span>" . "<div class='dropdown-content'>" . 
+  $link = $row['genre_name'] . ".php";
+    echo "<a href=$link><div class='dropdown'>" . "<span>" . $row['genre_name'] . "</span></a>" . "<div class='dropdown-content'>" . 
     "<p>";
     if ($row['genre_id'] == 1) { echo $genres[1]; } 
     elseif ($row['genre_id'] == 2) { echo $genres[2]; }
-    elseif ($row['genre_id'] == 3) { echo $genres[2]; }
+    elseif ($row['genre_id'] == 3) { echo $genres[3]; }
     
     echo "</p></div></div>";
 }
 
-// foreach ($db->query('SELECT song_name, album, artist, rating FROM song_info WHERE genre = $row[genre_id]') as $song)
-//     {
-//       echo $song['song_name'] . ' ' . $song['album'] .  ':' . $song['artist'] . 
-//       ' - ' . $song['rating'] . '<br>';
-//     } 
 ?>
 </div>
 <hr>

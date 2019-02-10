@@ -1,26 +1,4 @@
-<?php
-try
-{
-  $dbUrl = getenv('DATABASE_URL');
-
-  $dbOpts = parse_url($dbUrl);
-
-  $dbHost = $dbOpts["host"];
-  $dbPort = $dbOpts["port"];
-  $dbUser = $dbOpts["user"];
-  $dbPassword = $dbOpts["pass"];
-  $dbName = ltrim($dbOpts["path"],'/');
-
-  $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-
-  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $ex)
-{
-  echo 'Error!: ' . $ex->getMessage();
-  die();
-}
-?>
+<?php include 'load_songs.php'; ?>
 
 <!DOCTYPE html>
 <html>
@@ -34,6 +12,7 @@ catch (PDOException $ex)
 </head>
 <body>
 
+
 <?php include 'top_songs_header.php'; ?>
 
 <h3>Genre's:</h3>
@@ -43,7 +22,7 @@ catch (PDOException $ex)
 foreach ($db->query('SELECT genre_name FROM genre') as $row)
 {
     echo "<div class='dropdown'>" . "<span>" . $row['genre_name'] . "</span>" . "<div class='dropdown-content'>" . 
-    "<p>" . $db->query('SELECT song_name FROM song_info WHERE genre = $row[genre_name]') . "</p></div></div>";
+    "<p>" . $db->query('SELECT song_name FROM song_info WHERE genre = $row[genre_id]') . "</p></div></div>";
 }
 
 ?>

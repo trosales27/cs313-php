@@ -53,9 +53,8 @@ a {
 }
 
 table {
-  width: 80%;
+  width: 100%;
   text-align: center;
-  border-bottom: 4px solid black;
 }
 
 th {
@@ -63,7 +62,7 @@ th {
 }
 
 th, td {
-  border-bottom: 4px solid black;
+  border-bottom: 2px gray;
   padding: 12px;
 
 }

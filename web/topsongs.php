@@ -43,7 +43,7 @@ catch (PDOException $ex)
 foreach ($db->query('SELECT genre_name FROM genre') as $row)
 {
     echo "<div class='dropdown'>" . "<span>" . $row['genre_name'] . "</span>" . "<div class='dropdown-content'>" . 
-    "<p>" . "SELECT song_name FROM song_info WHERE genre= $row[genre_name]" . "</p></div></div>";
+    "<p>" . $db->query('SELECT song_name FROM song_info WHERE genre = $row[genre_name]') . "</p></div></div>";
 }
 
 ?>

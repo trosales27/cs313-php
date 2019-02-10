@@ -24,12 +24,12 @@ catch (PDOException $ex)
 
 $genres = array();
 $id = 1;
-foreach ($db->query('SELECT song_name, album, artist, rating FROM song_info WHERE genre = $row[$id]') as $song)
-    {
-      echo $song['song_name'];
-      $id += 1;
-      if ($id > 3) { break; }
-    }
+// foreach ($db->query('SELECT song_name, album, artist, rating FROM song_info WHERE genre = $row[$id]') as $song)
+//     {
+//       echo $song['song_name'];
+//       $id += 1;
+//       if ($id > 3) { break; }
+//     }
 // $genres = array();
 //  foreach ($db->query('SELECT genre_name FROM genre') as $row)  
 //  {

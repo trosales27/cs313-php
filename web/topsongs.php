@@ -34,8 +34,7 @@ catch (PDOException $ex)
 </head>
 <body>
 
-<h2>Top Songs</h2>
-<hr><br>
+<?php include 'top_songs_header.php'; ?>
 <h3>Genre's:</h3>
 <hr width=60%>
 <div class='genre'>

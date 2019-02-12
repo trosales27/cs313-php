@@ -4,8 +4,11 @@ require("dbConnect.php");
 
 print_r($_POST);
 $book = htmlspecialchars($_POST('book'));
+echo "<p>Check 1</p>";
 $chapter = htmlspecialchars($_POST('chapter'));
+echo "<p>Check 2</p>";
 $verse = htmlspecialchars($_POST('verse'));
+echo "<p>Check 3</p>";
 $content = htmlspecialchars($_POST('content'));
 foreach($content as $value) {
 

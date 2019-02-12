@@ -7,7 +7,7 @@ $book = htmlspecialchars($_POST('book'));
 $chapter = htmlspecialchars($_POST('chapter'));
 $verse = htmlspecialchars($_POST('verse'));
 $content = htmlspecialchars($_POST('content'));
-echo "content is: $content";
+echo "<p>content is: $content</p>";
 
 // try {
 

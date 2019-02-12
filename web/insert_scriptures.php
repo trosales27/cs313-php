@@ -1,10 +1,10 @@
 <?php
 require("dbConnect.php");
  
-$book = $_POST('book');
-$chapter = $_POST('chapter');
-$verse = $_POST('verse');
-$content = $_POST('content');
+$book = htmlspecialchars($_POST('book'));
+$chapter = htmlspecialchars($_POST('chapter'));
+$verse = htmlspecialchars($_POST('verse'));
+$content = htmlspecialchars($_POST('content'));
 
 try {
 
@@ -16,9 +16,10 @@ try {
     $stmt->execute();
     //$db->query("INSERT INTO scripture(book, chapter, verse, content) VALUES ($book, $chapter, $verse, $content)");
 }
-catch (PDOException $ex)
+catch (Exception $ex)
 {
 echo 'Error!: ' . $ex->getMessage();
+echo "<script alert($ex->getMessage())</script>";
 die();
 }
 

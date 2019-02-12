@@ -17,3 +17,15 @@ INSERT INTO scriptures(book, chapter, verse, content) VALUES ('Mosiah', 16, 9,
 	'He is the light and the life of the world; yea, a light that is endless, 
 	that can never be darkened; yea, and also a life which is endless, that there can 
 	be no more death.');
+
+CREATE TABLE topic (topic_id SERIAL PRIMARY KEY,
+	topic_name VARCHAR(50));
+
+CREATE TABLE scriptures_topic (scripture_topic_id SERIAL PRIMARY KEY,
+	scripture_id INTEGER REFERENCES scriptures(id),
+	topic_id INTEGER REFERENCES topic(topic_id)
+);
+
+INSERT INTO topic(topic_name) VALUES ('Faith');
+INSERT INTO topic(topic_name) VALUES ('Sacrifice');
+INSERT INTO topic(topic_name) VALUES ('Charity');

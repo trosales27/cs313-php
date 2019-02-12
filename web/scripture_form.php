@@ -1,6 +1,6 @@
 <?php
 require("dbConnect.php");
-$db = get_db();
+// $db = get_db();
 
 ?>
 
@@ -24,8 +24,8 @@ Verse: <input type='text' name='verse'><br>
 Content: <input type='textarea' name='content'><br>
 
 <?php
-$topics = $db->preapre("SELECT topic_id, topic_name FROM topic");
-$topics->execute();
+//$topics = $db->preapre("SELECT topic_id, topic_name FROM topic");
+//$topics->execute();
 
 
 foreach ($db->query('SELECT topic_id, topic_name FROM topic') as $row)

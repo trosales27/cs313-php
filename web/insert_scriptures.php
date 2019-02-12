@@ -7,7 +7,12 @@ $book = htmlspecialchars($_POST('book'));
 $chapter = htmlspecialchars($_POST('chapter'));
 $verse = htmlspecialchars($_POST('verse'));
 $content = htmlspecialchars($_POST('content'));
-echo "<p>content is: $content</p>";
+foreach($content as $value) {
+
+    echo "content is $content";
+    $content = $value . "<br>";
+ 
+ }
 
 // try {
 

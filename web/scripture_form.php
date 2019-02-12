@@ -17,7 +17,7 @@ require("dbConnect.php");
 <body>
 <h2>Scriptures!</h2>
 
-<form action="load_scriptures.php" method="post">
+<form action="insert_scriptures.php" method="post">
 Book: <input type='text' name='book'><br>
 Chatpter: <input type='text' name='chapter'><br>
 Verse: <input type='text' name='verse'><br>
@@ -30,7 +30,6 @@ Content: <input type='textarea' name='content'><br>
 
 foreach ($db->query('SELECT topic_id, topic_name FROM topic') as $row)
 {
-    echo "in loop";
     $topic_id = $row['topic_id'];
     $topic_name = $row['topic_name'];
 

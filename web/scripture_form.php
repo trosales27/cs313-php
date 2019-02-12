@@ -18,10 +18,10 @@ $db = get_db();
 <h2>Scriptures!</h2>
 
 <form action=post>
-<input type='text' name='book'>
-<input type='text' name='chapter'>
-<input type='text' name='verse'>
-<input type='textarea' name='content'>
+Book: <input type='text' name='book'><br>
+Chatpter: <input type='text' name='chapter'><br>
+Verse: <input type='text' name='verse'><br>
+Content: <input type='textarea' name='content'><br>
 
 <?php
 $topics = $db->preapre("SELECT topic_id, topic_name FROM topic");
@@ -29,6 +29,7 @@ $topics->execute();
 
 while ($row = $topics->fetch(PDO::FETCH_ASSOC))
 {
+    echo "in loop";
     $topic_id = $row['topic_id'];
     $topic_name = $row['topic_name'];
 

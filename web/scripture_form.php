@@ -17,15 +17,15 @@ $db = get_db();
 <body>
 <h2>Scriptures!</h2>
 
-<form action=post>
+<form action="load_scriptures.php" method="post">
 Book: <input type='text' name='book'><br>
 Chatpter: <input type='text' name='chapter'><br>
 Verse: <input type='text' name='verse'><br>
 Content: <input type='textarea' name='content'><br>
 
 <?php
-// $topics = $db->preapre("SELECT topic_id, topic_name FROM topic");
-// $topics->execute();
+$topics = $db->preapre("SELECT topic_id, topic_name FROM topic");
+$topics->execute();
 
 
 foreach ($db->query('SELECT topic_id, topic_name FROM topic') as $row)

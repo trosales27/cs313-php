@@ -24,12 +24,15 @@ $db = get_db();
 <input type='textarea' name='content'>
 
 <?php
-$topics = $db->preapre("SELECT topic_name FROM topic");
+$topics = $db->preapre("SELECT topic_id, topic_name FROM topic");
 $topics->execute();
 
-while ($topic = $topics->fetch(PDO::FETCH_ASSOC))
+while ($row = $topics->fetch(PDO::FETCH_ASSOC))
 {
-    echo "<input type=\'checkbox\' name='topic' value=$topic><br>";
+    $topic_id = $row['topic_id'];
+    $topic_name = $row['topic_name'];
+
+    echo "<input type=\'checkbox\' name='topic[]' value=$topic_id>$topic_name<br>";
 } 
 ?>
 

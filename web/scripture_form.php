@@ -27,7 +27,8 @@ Content: <input type='textarea' name='content'><br>
 $topics = $db->preapre("SELECT topic_id, topic_name FROM topic");
 $topics->execute();
 
-while ($row = $topics->fetch(PDO::FETCH_ASSOC))
+
+foreach ($db->query('SELECT topic_id, topic_name FROM topic') as $row)
 {
     echo "in loop";
     $topic_id = $row['topic_id'];

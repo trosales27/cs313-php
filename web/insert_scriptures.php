@@ -2,12 +2,10 @@
 require("dbConnect.php");
  
 
-//print_r($_POST);
-//echo "book"  . $_POST('book');
-$book = htmlspecialchars($_POST('book'));
-$chapter = htmlspecialchars($_POST('chapter'));
-$verse = htmlspecialchars($_POST('verse'));
-$content = htmlspecialchars($_POST('content'));
+$book = ($_POST('book'));
+$chapter = ($_POST('chapter'));
+$verse = ($_POST('verse'));
+$content = ($_POST('content'));
 foreach($content as $value) {
 
     //echo "content is $content";

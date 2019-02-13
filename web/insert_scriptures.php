@@ -32,7 +32,7 @@ echo "book is: $book<br> chap is: $chapter<br> verse is: $verse<br> content is: 
 // }
 
 
-//header('Location: display_scriptures.php');
-//die();
+header('Location: display_scriptures.php');
+die();
 
 ?>

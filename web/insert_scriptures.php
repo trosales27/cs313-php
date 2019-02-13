@@ -20,7 +20,7 @@ $stmt->bindValue(':book', $book, PDO::PARAM_STR);
 $stmt->bindValue(':chapter', $chapter, PDO::PARAM_INT);
 $stmt->bindValue(':verse', $verse, PDO::PARAM_INT);
 $stmt->bindValue(':content', $content, PDO::PARAM_STR);
-$shstmt->execute();
+$stmt->execute();
     //$db->query("INSERT INTO scripture(book, chapter, verse, content) VALUES ($book, $chapter, $verse, $content)");
 
 // catch (Exception $ex)

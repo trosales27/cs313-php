@@ -2,18 +2,18 @@
 require("dbConnect.php");
  
 
-$book = ($_POST('book'));
-$chapter = ($_POST('chapter'));
-$verse = ($_POST('verse'));
-$content = ($_POST('content'));
+//print_r($_POST);
+//echo "book"  . $_POST('book');
+$book = htmlspecialchars($_POST['book']);
+$chapter = htmlspecialchars($_POST['chapter']);
+$verse = htmlspecialchars($_POST['verse']);
+$content = htmlspecialchars($_POST['content']);
 foreach($content as $value) {
 
     //echo "content is $content";
     $content = $value . "<br>";
  
  }
-
-try {
 
     $stmt = $db->prepare('INSERT INTO scripture(book, chapter, verse, content) VALUES (:book, :chapter, :verse, :content)');
     $stmt->bindValue(':book', $book, PDO::PARAM_STR);
@@ -22,13 +22,13 @@ try {
     $stmt->bindValue(':content', $content, PDO::PARAM_STR);
     $stmt->execute();
     //$db->query("INSERT INTO scripture(book, chapter, verse, content) VALUES ($book, $chapter, $verse, $content)");
-}
-catch (Exception $ex)
-{
-echo 'Error!: ' . $ex->getMessage();
-echo "<script alert($ex->getMessage())</script>";
-die();
-}
+
+// catch (Exception $ex)
+// {
+// echo 'Error!: ' . $ex->getMessage();
+// echo "<script alert($ex->getMessage())</script>";
+// die();
+// }
 
 
 header('Location: display_scriptures.php');

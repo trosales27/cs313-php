@@ -18,10 +18,10 @@ require("dbConnect.php");
 <h2>Scriptures!</h2>
 
 <form action="insert_scriptures.php" method="post">
-Book: <input type='text' name='book'><br>
-Chatpter: <input type='text' name='chapter'><br>
-Verse: <input type='text' name='verse'><br>
-Content: <input type='textarea' name='content'><br>
+Book: <input type='text' name='book' id='book'><br>
+Chatpter: <input type='text' name='chapter' id='chapter'><br>
+Verse: <input type='text' name='verse' id='verse'><br>
+Content: <input type='textarea' name='content' id='content'><br>
 
 <?php
 //$topics = $db->preapre("SELECT topic_id, topic_name FROM topic");

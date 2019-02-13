@@ -3,6 +3,7 @@ require("dbConnect.php");
  
 
 print_r($_POST);
+echo "book" . $_POST('book');
 $book = htmlspecialchars($_POST('book'));
 echo "<p>Check 1</p>";
 $chapter = htmlspecialchars($_POST('chapter'));

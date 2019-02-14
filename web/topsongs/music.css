@@ -71,6 +71,6 @@ td {
 
 }
 
-#addSong {
+.addSong {
   visibility: hidden;
 }

@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="music.css" />
     <script src="main.js">
     function addSong() {
-      // document.getElementById('addSong').style.visibility = visible;
+      document.getElementById('addSong').style.visibility = visible;
       alert("You clicked a button!");
       document.getElementById('addSong').hidden = false;
     }
@@ -41,8 +41,8 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 </div>
 <hr>
 <h4>Add a Song</h4>
-<button onclick=addSong()>Add Song</button>
-<div id='addSong'>
+<button onclick='addSong()'>Add Song</button>
+<div class='addSong' id='addSong'>
   <form>
     <select name='genre'>
       <?php

@@ -11,6 +11,7 @@
     <script src="main.js">
     function addSong() {
       // document.getElementById('addSong').style.visibility = visible;
+      alert("You clicked a button!");
       document.getElementById('addSong').hidden = false;
     }
     </script>

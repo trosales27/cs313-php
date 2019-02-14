@@ -8,7 +8,11 @@
     <title>Top Songs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="music.css" />
-    <script src="main.js"></script>
+    <script src="main.js">
+    function addSong() {
+      document.getElementById('addSong').style.visibility = visible;
+    }
+    </script>
 </head>
 <body>
 
@@ -34,14 +38,19 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 ?>
 </div>
 <hr>
-<?php
-// foreach ($db->query('SELECT song_name, album, artist, rating FROM song_info') as $row)
-// {
-//   echo $row['song_name'] . ' ' . $row['album'] .  ':' . $row['artist'] . 
-//   ' - ' . $row['rating'] . '<br>';
-// }
-
-?>
+<h4>Add a Song</h4>
+<button onclick='addSong()'>Add Song</button>
+<div id='addSong'>
+  <form>
+    <select name='genre'>
+      <?php
+      foreach ($db->query('SELECT genre_name FROM genre') as $genre)
+      {
+        echo '<option value="$genre">$genre</option>';
+      }
+      ?>
+</form>
+</div>
     
 </body>
 </html>

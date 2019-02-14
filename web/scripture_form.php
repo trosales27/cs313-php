@@ -34,8 +34,10 @@ foreach ($db->query('SELECT topic_id, topic_name FROM topic') as $row)
     $topic_name = $row['topic_name'];
 
     echo "$topic_name<input type='checkbox' name='topic[]' value=$topic_id><br>";
-} 
+}
+echo "<input type='checkbox' name='new_topic' value='$new_topic_id'<br>"; 
 ?>
+
 
 <input type='submit'>
 </form>

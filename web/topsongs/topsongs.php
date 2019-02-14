@@ -8,10 +8,10 @@
     <title>Top Songs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="music.css" />
-    <script src="main.js">
+    <script>
     function addSong() {
-      document.getElementById('addSong').style.visibility = visible;
       alert("You clicked a button!");
+      document.getElementById('addSong').style.visibility = visible;
       //document.getElementById('addSong').hidden = false;
     }
     </script>

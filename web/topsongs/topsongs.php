@@ -41,7 +41,7 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 </div>
 <hr>
 <h4>Add a Song</h4>
-<button onclick='addSong()'>Add Song</button>
+<button onclick=addSong()>Add Song</button>
 <div id='addSong'>
   <form>
     <select name='genre'>

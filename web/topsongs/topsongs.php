@@ -48,7 +48,7 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
       <?php
       foreach ($db->query('SELECT genre_name FROM genre') as $genre)
       {
-        echo "<option value=$genre>$genre</option>";
+        echo "<option value='$genre'>$genre</option>";
       }
       ?>
 </form>

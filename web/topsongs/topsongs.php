@@ -10,8 +10,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="music.css" />
     <script>
     function addSong() {
-      alert("You clicked a button!");
       document.getElementById('addSong').style.visibility = visible;
+
       //document.getElementById('addSong').hidden = false;
     }
     </script>

@@ -10,9 +10,9 @@
     <link rel="stylesheet" type="text/css" media="screen" href="music.css" />
     <script>
     function addSong() {
-      document.getElementById('addSong').style.visibility = visible;
+      //document.getElementById('addSong').style.visibility = visible;
 
-      //document.getElementById('addSong').hidden = false;
+      document.getElementById('addSong').hidden = false;
     }
     </script>
 </head>

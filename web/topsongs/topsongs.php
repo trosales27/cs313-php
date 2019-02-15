@@ -50,8 +50,8 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
       {
         echo "<option value=$genre[genre_name]>$genre[genre_name]</option>";
       }
+      echo "</select><br>"
       ?>
-      <br>
       Name: <input type='text' name='song_name'><br>
       Artist: <input type='text' name='artist'><br>
       Album: <input type='text' name='album'><br>

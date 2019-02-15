@@ -43,9 +43,10 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 <h4>Add a Song</h4>
 <button onclick='addSong()'>Add Song</button>
 <div> <!--make this invisible later? -->
-  <form>
+  <form action='submit_song.php' method='post'>
     <select name='genre'>
       <?php
+      echo "Genre: ";
       foreach ($db->query('SELECT genre_name FROM genre') as $genre)
       {
         echo "<option value=$genre[genre_name]>$genre[genre_name]</option>";
@@ -55,6 +56,14 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
       Name: <input type='text' name='song_name'><br>
       Artist: <input type='text' name='artist'><br>
       Album: <input type='text' name='album'><br>
+      Rating: <select name='rating'>
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+      </select>
+      <button type='submit'>Submit</button>
 </form>
 </div>
     

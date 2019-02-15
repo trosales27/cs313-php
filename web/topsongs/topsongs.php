@@ -53,7 +53,7 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
       }
       echo "</select><br>"
       ?>
-      Name: <input type='text' name='song_name'><br>
+      Name: <input type='text' name='song'><br>
       Artist: <input type='text' name='artist'><br>
       Album: <input type='text' name='album'><br>
       Rating: <select name='rating'>
@@ -62,7 +62,7 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
         <option value=3>3</option>
         <option value=4>4</option>
         <option value=5>5</option>
-      </select>
+      </select><br>
       <button type='submit'>Submit</button>
 </form>
 </div>

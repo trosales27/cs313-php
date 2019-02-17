@@ -7,7 +7,8 @@ $rating =  $_POST['rating'];
 $genre = $_POST['genre'];
 
 $num = "SELECT times_voted FROM song_info WHERE song_name = $song AND artist = '$artist'";
-$num  = $num + 1;
+//echo "Num is: $num";
+//$num  = $num + 1;
 $query="UPDATE song_info SET (times_voted) = $num WHERE song_name = $song AND artist = $artist";
 
 $stmt = $db->prepare('INSERT INTO song_info(song_name, album, artist, rating, genre) VALUES (:song, :album, :artist, :rating, :genre)');

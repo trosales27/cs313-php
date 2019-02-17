@@ -7,7 +7,7 @@ CREATE TABLE song_info(song_id SERIAL PRIMARY KEY,
 	artist VARCHAR(50),
 	rating SMALLINT NOT NULL,
 	genre VARCHAR(50) REFERENCES genre(genre_name),
-	times_voted INTEGER NOT NULL); 
+	times_voted INTEGER); 
 
 
 CREATE TABLE user_info(user_id SERIAL PRIMARY KEY,

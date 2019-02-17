@@ -10,7 +10,7 @@ $num = "SELECT times_voted FROM song_info WHERE song_name = $song AND artist = '
 $num  = $num + 1;
 $query="UPDATE song_info SET (times_voted) = $num WHERE song_name = $song AND artist = $artist";
 
-$stmt = $db->prepare('INSERT INTO song_info(song_name, album, artist, rating, genre, times_voted) VALUES (:song, :album, :artist, :rating, :genre)');
+$stmt = $db->prepare('INSERT INTO song_info(song_name, album, artist, rating, genre) VALUES (:song, :album, :artist, :rating, :genre)');
 $stmt->bindValue(':song', $song, PDO::PARAM_STR);
 $stmt->bindValue(':album', $album, PDO::PARAM_STR);
 $stmt->bindValue(':artist', $artist, PDO::PARAM_STR);

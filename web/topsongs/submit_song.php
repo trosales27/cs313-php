@@ -19,5 +19,4 @@ $stmt->bindValue(':genre', $genre, PDO::PARAM_STR);
 $stmt->execute();
 
 
-
 ?>

@@ -20,7 +20,7 @@
 <table>
 <th>Name</th><th>Artist</th><th>Album</th><th>rating</th>
 <?php
-foreach ($db->query('SELECT song_name, album, artist, rating FROM song_info WHERE genre = 3') as $song)
+foreach ($db->query("SELECT song_name, album, artist, rating FROM song_info WHERE genre = 'Jazz'") as $song)
 {
     echo "<tr><td>" . $song['song_name'] . "</td><td>" . $song['artist'] . "</td><td>" . $song['album']
     . "</td><td>" . $song['rating'] . "</td></tr>";

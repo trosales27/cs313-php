@@ -6,7 +6,8 @@ CREATE TABLE song_info(song_id SERIAL PRIMARY KEY,
 	album VARCHAR(50),
 	artist VARCHAR(50),
 	rating SMALLINT NOT NULL,
-	genre VARCHAR(50) REFERENCES genre(genre_name));
+	genre VARCHAR(50) REFERENCES genre(genre_name),
+	times_voted INTEGER NOT NULL); 
 
 
 CREATE TABLE user_info(user_id SERIAL PRIMARY KEY,
@@ -26,23 +27,23 @@ INSERT INTO genre (genre_name) VALUES ('Jazz');
 -- INSERT INTO genre (genre_name) VALUES ('Alternative');
 -- INSERT INTO genre (genre_name) VALUES ('Country');
 
-INSERT INTO song_info(song_name, album, artist, rating, genre) VALUES ('The Flood', 'The Congregation', 
-	'Leprous', 5, 'Metal');
+INSERT INTO song_info(song_name, album, artist, rating, genre, times_voted) VALUES ('The Flood', 'The Congregation', 
+	'Leprous', 5, 'Metal', 1);
 
-INSERT INTO song_info(song_name, album, artist, rating, genre) VALUES ('Cockroach King', 'The Mountain', 
-	'Haken', 5, 'Metal');
+INSERT INTO song_info(song_name, album, artist, rating, genre, times_voted) VALUES ('Cockroach King', 'The Mountain', 
+	'Haken', 5, 'Metal', 1);
 
-INSERT INTO song_info(song_name, album, artist, rating, genre) VALUES ('Bohemian Rhapsody', 'A Night at the Opera', 
-	'Queen', 5, 'Rock');
+INSERT INTO song_info(song_name, album, artist, rating, genre, times_voted) VALUES ('Bohemian Rhapsody', 'A Night at the Opera', 
+	'Queen', 5, 'Rock', 1);
 
-INSERT INTO song_info(song_name, album, artist, rating, genre) VALUES ('Resistance', 'The Resistance', 
-	'Muse', 4, 'Rock');
+INSERT INTO song_info(song_name, album, artist, rating, genre, times_voted) VALUES ('Resistance', 'The Resistance', 
+	'Muse', 4, 'Rock', 1);
 
-INSERT INTO song_info(song_name, album, artist, rating, genre) VALUES ('Take the A Train', '', 
-	'Duke Ellingtion', 3, 'Jazz');
+INSERT INTO song_info(song_name, album, artist, rating, genre, times_voted) VALUES ('Take the A Train', '', 
+	'Duke Ellingtion', 3, 'Jazz', 1);
 
-INSERT INTO song_info(song_name, album, artist, rating, genre) VALUES ('A Night in Tunisia', '', 
-	'Dizzy Gellespie', 4, 'Jazz');
+INSERT INTO song_info(song_name, album, artist, rating, genre, times_voted) VALUES ('A Night in Tunisia', '', 
+	'Dizzy Gellespie', 4, 'Jazz', 1);
 
 --Joining tables together
 SELECT * FROM song_info s

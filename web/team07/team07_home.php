@@ -7,7 +7,7 @@ if (isset($_SESSION['username']))
 }
 else
 {
-    header("Location: \team07\login.php");
+    header("Location: /team07/login.php");
     die();
 }
 ?>

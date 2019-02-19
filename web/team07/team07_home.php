@@ -7,7 +7,7 @@ if (isset($_SESSION['username']))
 }
 else
 {
-    header("Location: sign_in.php");
+    header("Location: login.php");
     die();
 }
 ?>
@@ -25,7 +25,7 @@ else
 <body>
 <h2>Home page</h2>
 <p>Your Username is: <?php $username?>
-<a href='sign_out.php'>Log Out</a>
+<a href='logout.php'>Log Out</a>
 
 
 </body>

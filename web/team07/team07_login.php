@@ -16,7 +16,7 @@ session_start();
 <h2>Login page</h2>
 <form action='login.php' method='post'>
     Username: <input type='text' name='username'>
-    Password: <input type='' name='password'>
+    Password: <input type='password' name='password'>
     <button type='submit'>Login</button>
 </form>
 </body>

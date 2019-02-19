@@ -23,7 +23,7 @@
 foreach ($db->query("SELECT song_name, album, artist, rating FROM song_info WHERE genre = 'Metal'") as $song)
 {
     echo "<tr><td>" . $song['song_name'] . "</td><td>" . $song['artist'] . "</td><td>" . $song['album']
-    . "</td><td>" . $song['rating'] . "</td></tr>";
+    . "</td><td>" . $song['rating'] . "</td><td><a href='vote.php'><button>Like this Song</button></a></td></tr>";
 }
 ?>
 </table>

@@ -18,12 +18,17 @@
 <?php include 'top_songs_header.php'; ?>
 <h2>Top Rock Songs:</h2>
 <table>
-<th>Name</th><th>Artist</th><th>Album</th><th>rating</th>
+<th>Name</th><th>Artist</th><th>Album</th><th>Rating</th>
 <?php
 foreach ($db->query("SELECT song_name, album, artist, rating FROM song_info WHERE genre = 'Metal'") as $song)
 {
+    $song1 = $song['song_name'];
+    echo "<form action='vote.php' method='post'>";
+    echo "<input type='hidden' name='song_name' value='$song[song_name]'>";
+    echo "<input type='hidden' name='artist' value='$song[artist]'>";
+    echo "<input type='hidden' name='rating' value='$song[rating]'>";
     echo "<tr><td>" . $song['song_name'] . "</td><td>" . $song['artist'] . "</td><td>" . $song['album']
-    . "</td><td>" . $song['rating'] . "</td><td><a href='vote.php'><button>Like this Song</button></a></td></tr>";
+    . "</td><td>" . $song['rating'] . "</td><td><button type='submit'>Like this Song</button></td></tr></form>";
 }
 ?>
 </table>

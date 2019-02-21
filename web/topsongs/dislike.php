@@ -1,6 +1,6 @@
 <?php
 
-//print_r($_POST);
+print_r($_POST);
 
 $song = $_POST['song_name'];
 $artist = $_POST['artist'];

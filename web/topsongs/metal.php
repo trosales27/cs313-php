@@ -23,12 +23,17 @@
 foreach ($db->query("SELECT song_name, album, artist, rating FROM song_info WHERE genre = 'Metal'") as $song)
 {
     $song1 = $song['song_name'];
-    echo "<form action='vote.php' method='post'>";
+    echo "<form action='like.php' method='post'>";
     echo "<input type='hidden' name='song_name' value='$song[song_name]'>";
     echo "<input type='hidden' name='artist' value='$song[artist]'>";
     echo "<input type='hidden' name='rating' value='$song[rating]'>";
     echo "<tr><td>" . $song['song_name'] . "</td><td>" . $song['artist'] . "</td><td>" . $song['album']
-    . "</td><td>" . $song['rating'] . "</td><td><button type='submit'>Like this Song</button></td></tr></form>";
+    . "</td><td>" . $song['rating'] . "</td><td><button type='submit'>Like</button></td></tr></form>";
+    echo "<form action='dislike.php' method='post'>";
+    echo "<input type='hidden' name='song_name' value='$song[song_name]'>";
+    echo "<input type='hidden' name='artist' value='$song[artist]'>";
+    echo "<input type='hidden' name='rating' value='$song[rating]'>";
+    echo "<button type='submit'>Dislike</button></form>";
 }
 ?>
 </table>

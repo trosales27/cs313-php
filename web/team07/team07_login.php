@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 
 
@@ -19,5 +20,7 @@ session_start();
     Password: <input type='password' name='password'>
     <button type='submit'>Login</button>
 </form>
+
+<p>Don't have an account? Create one <a href='team07_sign_up.php'>here.</a></p>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@
 </head>
 <body>
 <h2>Create an Account</h2>
-<form action='create_account.php' method='post'>
+<form action='insert_db.php' method='post'>
     Enter username: <input type='text' name='username'>
     Enter Password: <input type='password' name='password'>
     <button type='submit'>Submit</button>

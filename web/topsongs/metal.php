@@ -28,12 +28,12 @@ foreach ($db->query("SELECT song_name, album, artist, rating FROM song_info WHER
     echo "<input type='hidden' name='artist' value='$song[artist]'>";
     echo "<input type='hidden' name='rating' value='$song[rating]'>";
     echo "<tr><td>" . $song['song_name'] . "</td><td>" . $song['artist'] . "</td><td>" . $song['album']
-    . "</td><td>" . $song['rating'] . "</td><td><button type='submit'>Like</button></td></tr></form>";
+    . "</td><td>" . $song['rating'] . "</td><td><button type='submit'>Like</button></form>";
     echo "<form action='dislike.php' method='post'>";
     echo "<input type='hidden' name='song_name' value='$song[song_name]'>";
     echo "<input type='hidden' name='artist' value='$song[artist]'>";
     echo "<input type='hidden' name='rating' value='$song[rating]'>";
-    echo "<button type='submit'>Dislike</button></form>";
+    echo "<button type='submit'>Dislike</button></form></td></tr>";
 }
 ?>
 </table>

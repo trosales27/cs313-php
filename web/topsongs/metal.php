@@ -6,10 +6,6 @@ function computePercentage($rating, $times_voted) {
     return $rating / ($times_voted * 5);
 }
 
-function updatePercentage() {
-    //Does this need to be a thing?
-    //ALso need to limit once vote per user - so store vote in session?
-}
 ?>
 
 

@@ -2,6 +2,7 @@
 //METAL
 
 function computePercentage($rating, $times_voted) {
+    echo "<script>console.log('in function');</script>";
     return $rating / ($times_voted * 5);
 }
 

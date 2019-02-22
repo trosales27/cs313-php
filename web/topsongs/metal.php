@@ -3,7 +3,7 @@
 
 function computePercentage($rating, $times_voted) {
     echo "<script>console.log('in function');</script>";
-    echo $rating / ($times_voted * 5);
+    //echo $rating / ($times_voted * 5);
     return $rating / ($times_voted * 5);
 }
 

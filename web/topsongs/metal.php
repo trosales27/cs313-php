@@ -38,7 +38,7 @@ foreach ($db->query("SELECT song_name, album, artist, rating, times_voted FROM s
     echo "<input type='hidden' name='rating' value='$song[rating]'>";
     echo "<tr><td>" . $song['song_name'] . "</td><td>" . $song['artist'] . "</td><td>" . $song['album']
     . "</td><td>";
-    updatePercentage($rating, $times_voted);
+    echo updatePercentage($rating, $times_voted);
     echo "</td><td><button type='submit'>Like</button></form>";
 }
 ?>

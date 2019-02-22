@@ -3,6 +3,7 @@
 
 function computePercentage($rating, $times_voted) {
     echo "<script>console.log('in function');</script>";
+    echo $rating / ($times_voted * 5);
     return $rating / ($times_voted * 5);
 }
 
@@ -29,13 +30,15 @@ function computePercentage($rating, $times_voted) {
 foreach ($db->query("SELECT song_name, album, artist, rating, times_voted FROM song_info WHERE genre = 'Metal'") as $song)
 {
     $song1 = $song['song_name'];
+    $rating = $song['rating'];
+    $times_voted = $song['times_voted'];
     echo "<form action='vote.php' method='post'>";
     echo "<input type='hidden' name='song_name' value='$song[song_name]'>";
     echo "<input type='hidden' name='artist' value='$song[artist]'>";
     echo "<input type='hidden' name='rating' value='$song[rating]'>";
     echo "<tr><td>" . $song['song_name'] . "</td><td>" . $song['artist'] . "</td><td>" . $song['album']
     . "</td><td>";
-    updatePercentage($song['rating'], $song['times_voted']);
+    updatePercentage($rating, $times_voted);
     echo "</td><td><button type='submit'>Like</button></form>";
 }
 ?>

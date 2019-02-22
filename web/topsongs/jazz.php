@@ -14,7 +14,8 @@ function computePercentage($rating, $times_voted) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Top Jazz Songs</title> <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Top Jazz Songs</title> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="music.css">
     <script src="main.js"></script>
 </head>
@@ -24,7 +25,7 @@ function computePercentage($rating, $times_voted) {
 
 <h2>Top Jazz Songs:</h2>
 <table>
-<th>Name</th><th>Artist</th><th>Album</th><th>rating</th>
+<th>Name</th><th>Artist</th><th>Album</th><th>Rating</th>
 <?php
 foreach ($db->query("SELECT song_name, album, artist, rating, times_voted FROM song_info WHERE genre = 'Jazz'") as $song)
 {

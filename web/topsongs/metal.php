@@ -1,14 +1,13 @@
-<?php include 'load_songs.php';
+<?php 
 //METAL
+include 'load_songs.php';
 
 function computePercentage($rating, $times_voted) {
     //echo "<script>console.log('in function');</script>";
     $percentage = 100 * ($rating / ($times_voted * 5));
     return $percentage . "%";
 }
-
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -23,6 +22,7 @@ function computePercentage($rating, $times_voted) {
 <body>
 
 <?php include 'top_songs_header.php'; ?>
+
 <h2>Top Rock Songs:</h2>
 <table>
 <th>Name</th><th>Artist</th><th>Album</th><th>Rating</th>

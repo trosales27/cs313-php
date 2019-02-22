@@ -1,5 +1,5 @@
 CREATE TABLE genre(genre_id SERIAL PRIMARY KEY,
-	genre_name VARCHAR(50) NOT NULL UNIQUE	);
+	genre_name VARCHAR(50) NOT NULL UNIQUE);
 
 CREATE TABLE song_info(song_id SERIAL PRIMARY KEY,
 	song_name text NOT NULL,
@@ -7,15 +7,18 @@ CREATE TABLE song_info(song_id SERIAL PRIMARY KEY,
 	artist VARCHAR(50),
 	rating SMALLINT NOT NULL,
 	genre VARCHAR(50) REFERENCES genre(genre_name),
-	times_voted INTEGER); 
+	times_voted INTEGER);
 
+
+--Make anew column for percentage based off rating and times_voted
+--Rating will be a large int number, divided by the int times_voterd which will give a float percentage
 
 CREATE TABLE user_info(user_id SERIAL PRIMARY KEY,
 	username VARCHAR(50) NOT NULL UNIQUE,
 	password VARCHAR(60));
 
 
-SELECT * FROM song_info WHERE rating >= 4;
+--SELECT * FROM song_info WHERE rating >= 4;
 
 INSERT INTO genre (genre_name) VALUES ('Rock');
 INSERT INTO genre (genre_name) VALUES ('Metal');

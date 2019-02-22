@@ -11,7 +11,7 @@ $rating = $rating + $vote;
 $times_voted = $times_voted + 1;
 
 
-$stmt = $db->prepare('UPDATE song_info(times_voted, rating) SET (:times_voted, :rating)');
+$stmt = $db->prepare('UPDATE song_info(times_voted, rating) VALUES (:times_voted, :rating)');
 $stmt->bindValue(':times_voted', $tiems_voted, PDO::PARAM_INT);
 $stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 $stmt->execute();

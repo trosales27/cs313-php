@@ -23,7 +23,7 @@ function computePercentage($rating, $times_voted) {
 
 <?php include 'top_songs_header.php'; ?>
 
-<h2>Top Rock Songs:</h2>
+<h2>Top Metal Songs:</h2>
 <table>
 <th>Name</th><th>Artist</th><th>Album</th><th>Rating</th>
 <?php
@@ -37,7 +37,9 @@ foreach ($db->query("SELECT song_name, album, artist, rating, times_voted FROM s
     echo "<input type='hidden' name='artist' value='$song[artist]'>";
     echo "<input type='hidden' name='rating' value='$song[rating]'>";
     echo "<tr><td>" . $song['song_name'] . "</td><td>" . $song['artist'] . "</td><td>" . $song['album'] . "</td><td>" . 
-    computePercentage($rating, $times_voted) . "</td><td><button type='submit'>Like</button></form>";
+    computePercentage($rating, $times_voted) . "</td><td><select name='vote>
+    <option value='1'>1</option><option value='2'>2</option><option value='3'>3</option>
+    <option value='4'>4</option><option value='5'>5</option></select></td><td><button type='submit'>Like</button></form>";
 }
 ?>
 </table>

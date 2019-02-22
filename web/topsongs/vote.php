@@ -10,7 +10,7 @@ $vote = $_POST['vote'];
 $rating = $rating + $vote;
 $times_voted = $times_voted + 1;
 
-$query="UPDATE song_info SET (times_voted, rating) = ($rating, $times_voted) WHERE song_name = $song AND artist = $artist";
+$query="UPDATE song_info SET (times_voted, rating) = ($times_voted, $rating) WHERE song_name = $song AND artist = $artist";
 
 $statement = $db->prepare($query);
 $statement->execute();

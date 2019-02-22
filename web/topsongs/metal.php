@@ -35,7 +35,8 @@ foreach ($db->query("SELECT song_name, album, artist, rating, times_voted FROM s
     echo "<form action='vote.php' method='post'>";
     echo "<input type='hidden' name='song_name' value='$song[song_name]'>";
     echo "<input type='hidden' name='artist' value='$song[artist]'>";
-    echo "<input type='hidden' name='rating' value='$song[rating]'>";
+    echo "<input type='hidden' name='rating' value=$rating>";
+    echo "<input type='hidden' name='times_voted' value=$times_voted>";
     echo "<tr><td>" . $song['song_name'] . "</td><td>" . $song['artist'] . "</td><td>" . $song['album'] . "</td><td>" . 
     computePercentage($rating, $times_voted) . "</td><td><select name='vote'>
     <option value='1'>1</option><option value='2'>2</option><option value='3'>3</option>

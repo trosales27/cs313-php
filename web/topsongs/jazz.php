@@ -5,7 +5,7 @@ include 'load_songs.php';
 function computePercentage($rating, $times_voted) {
     //echo "<script>console.log('in function');</script>";
     $percentage = 100 * ($rating / ($times_voted * 5));
-    return $percentage . "%";
+    return round($percentage, 2) . "%";
 }
 ?>
 

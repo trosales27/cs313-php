@@ -1,7 +1,7 @@
 <?php
 require("dbConnect.php");
 
-print_r($_POST);
+var_dump($_POST);
 
 $song = $_POST['song_name'];
 $artist = $_POST['artist'];
@@ -12,12 +12,16 @@ $times_voted = (int) $_POST['times_voted'];
 $rating = $rating + $vote;
 $times_voted = $times_voted + 1;
 
-$sql = "UPDATE song_info SET :times_voted, :rating = times_voted, :rating WHERE song_name = '$song' AND artist = '$artist'";
+// var_dump($rating);
+// var_dump($times_voted);
 
+$sql = "UPDATE song_info SET times_voted = :times_voted, rating = :rating WHERE song_name = '$song' AND artist = '$artist'";
+
+//var_dump($sql);
 
 $stmt = $db->prepare($sql);
-$stmt->bindValue(':times_voted', $times_voted);
-$stmt->bindValue(':rating', $rating);
+$stmt->bindValue(":times_voted", $times_voted);
+$stmt->bindValue(":rating", $rating);
 $stmt->execute();
 
 //$query="UPDATE song_info SET (times_voted, rating) = ($times_voted, $rating) WHERE song_name = $song AND artist = $artist";

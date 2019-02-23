@@ -24,7 +24,7 @@ $stmt->bindValue(":times_voted", $times_voted);
 $stmt->bindValue(":rating", $rating);
 $stmt->execute();
 
-header("Location: 'javascript:history.go(-1)'");
+header("Location: javascript:history.go(-1)");
 die();
 
 //$query="UPDATE song_info SET (times_voted, rating) = ($times_voted, $rating) WHERE song_name = $song AND artist = $artist";

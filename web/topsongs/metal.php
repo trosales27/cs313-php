@@ -17,7 +17,7 @@ function computePercentage($rating, $times_voted) {
     <title>Top Metal Songs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="music.css">
-    <script src="main.js"></script>
+    <script></script>
 </head>
 <body>
 
@@ -42,7 +42,10 @@ foreach ($db->query("SELECT song_name, album, artist, rating, times_voted FROM s
     <option value='1'>1</option><option value='2'>2</option><option value='3'>3</option>
     <option value='4'>4</option><option value='5'>5</option></select></td><td><button type='submit'>Like</button></form>";
 }
+
+//NEED TO DISPLAY SONGS BY ORDER OF POPULARITY - make a sorted php array of songs based off popularity?
 ?>
+
 </table>
 
 </body>

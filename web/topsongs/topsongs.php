@@ -14,6 +14,12 @@
 
       document.getElementById('addSong').hidden = false;
     }
+
+    $(document).ready(function(){
+    $("#formButton").click(function(){
+        $("#submit_song").toggle();
+    });
+});
     </script>
 </head>
 <body>
@@ -41,9 +47,9 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 </div>
 <hr>
 <h4>Add a Song</h4>
-<button onclick='addSong()'>Add Song</button>
-<div> <!--make this invisible later? -->
-  <form action='submit_song.php' method='post'>
+<button id='formButton' onclick='addSong()'>Add Song</button>
+<div id=#addSong> <!--make this invisible later? -->
+  <form action='submit_song.php' method='post' id='submit_song'>
     <select name='genre'>
       <?php
       echo "Genre: ";

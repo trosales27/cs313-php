@@ -5,9 +5,9 @@ print_r($_POST);
 
 $song = $_POST['song_name'];
 $artist = $_POST['artist'];
-$rating = $_POST['rating'];
+$rating = (int) $_POST['rating'];
 $vote = $_POST['vote'];
-$times_voted = $_POST['times_voted'];
+$times_voted = (int) $_POST['times_voted'];
 
 $rating = $rating + $vote;
 $times_voted = $times_voted + 1;

@@ -7,13 +7,14 @@ $song = $_POST['song_name'];
 $artist = $_POST['artist'];
 $rating = $_POST['rating'];
 $vote = $_POST['vote'];
+$times_voted = $_POST['times_voted'];
 
 $rating = $rating + $vote;
 $times_voted = $times_voted + 1;
 
 
 $stmt = $db->prepare("UPDATE song_info(times_voted, rating) VALUES (:times_voted, :rating) WHERE song_name = $song AND artist = $artist");
-$stmt->bindValue(':times_voted', $tiems_voted, PDO::PARAM_INT);
+$stmt->bindValue(':times_voted', $times_voted, PDO::PARAM_INT);
 $stmt->bindValue(':rating', $rating, PDO::PARAM_INT);
 $stmt->execute();
 

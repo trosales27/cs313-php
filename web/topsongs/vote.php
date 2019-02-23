@@ -1,4 +1,5 @@
 <?php
+require("dbConnect.php");
 
 print_r($_POST);
 

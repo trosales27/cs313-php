@@ -16,7 +16,7 @@
     }
 
     $(document).ready(function(){
-    $("#formButton").click(function(){
+    $("#form_button").click(function(){
         $("#submit_song").toggle();
     });
 });
@@ -47,8 +47,8 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 </div>
 <hr>
 <h4>Add a Song</h4>
-<button id='formButton' onclick='addSong()'>Add Song</button>
-<div id=#addSong> <!--make this invisible later? -->
+<button id='form_button' onclick='addSong()'>Add Song</button>
+<div id='submit_song'> <!--make this invisible later? -->
   <form action='submit_song.php' method='post' id='submit_song'>
     <select name='genre'>
       <?php

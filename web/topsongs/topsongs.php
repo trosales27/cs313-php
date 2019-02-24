@@ -9,17 +9,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="music.css" />
     <script>
-    function addSong() {
+    //function addSong() {
       //document.getElementById('addSong').style.visibility = visible;
 
-      document.getElementById('addSong').hidden = false;
-    }
+      //document.getElementById('addSong').hidden = false;
+    //}
 
     $(document).ready(function(){
-    $("#form_button").click(function(){
+      $("#form_button").click(function(){
         $("#submit_song").toggle();
-    });
-});
+        });
+      });
 
     </script>
 </head>
@@ -48,8 +48,8 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 </div>
 <hr>
 <h4>Add a Song</h4>
-<button id='form_button'>Add Song</button>
-<div id='submit_song'> <!--make this invisible later? -->
+<button id="form_button">Add Song</button>
+<div id="submit_song"> <!--make this invisible later? -->
   <form action='submit_song.php' method='post' id='submit_song'>
     <select name='genre'>
       <?php

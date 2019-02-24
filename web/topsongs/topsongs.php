@@ -30,7 +30,7 @@
 
 <h3>Genre's:</h3>
 <hr width=60%>
-<div class='genre'>
+<div class="genre">
 <?php
 foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 {
@@ -50,8 +50,8 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 <h4>Add a Song</h4>
 <button id="form_button">Add Song</button>
 <div id="submit_song"> <!--make this invisible later? -->
-  <form action='submit_song.php' method='post' id='submit_song'>
-    <select name='genre'>
+  <form action="submit_song.php" method="post" id="submit_song">
+    <select name="genre">
       <?php
       echo "Genre: ";
       foreach ($db->query('SELECT genre_name FROM genre') as $genre)
@@ -60,17 +60,17 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
       }
       echo "</select><br>"
       ?>
-      Name: <input type='text' name='song'><br>
-      Artist: <input type='text' name='artist'><br>
-      Album: <input type='text' name='album'><br>
-      Rating: <select name='rating'>
+      Name: <input type="text" name="song"><br>
+      Artist: <input type="text" name="artist"><br>
+      Album: <input type="text" name="album"><br>
+      Rating: <select name="rating">
         <option value=1>1</option>
         <option value=2>2</option>
         <option value=3>3</option>
         <option value=4>4</option>
         <option value=5>5</option>
       </select><br>
-      <button type='submit'>Submit</button>
+      <button type="submit">Submit</button>
 </form>
 </div>
     

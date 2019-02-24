@@ -14,13 +14,18 @@
 
       //document.getElementById('addSong').hidden = false;
     //}
-
-    $(document).ready(function(){
-      $("#form_button").click(function(){
+    $("#form_button").click(function(){
         console.log("I've been clicked!");
         $("#submit_song").toggle();
         });
-      });
+
+
+    // $(document).ready(function(){
+    //   $("#form_button").click(function(){
+    //     console.log("I've been clicked!");
+    //     $("#submit_song").toggle();
+    //     });
+    //   });
 
     </script>
 </head>

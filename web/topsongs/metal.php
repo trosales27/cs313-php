@@ -2,6 +2,12 @@
 //METAL
 include 'load_songs.php';
 
+//Put all songs into an array, sort array using key-value pairs so that the highest rated songs are at the top
+//Iterate thorugh array to display all songs
+//Other option is to sort songs by rating int o the table?
+
+//TODO - Make sure each user can only vote on a song once
+
 function computePercentage($rating, $times_voted) {
     //echo "<script>console.log('in function');</script>";
     $percentage = 100 * ($rating / ($times_voted * 5));
@@ -17,7 +23,6 @@ function computePercentage($rating, $times_voted) {
     <title>Top Metal Songs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="music.css">
-    <script></script>
 </head>
 <body>
 

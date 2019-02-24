@@ -20,6 +20,7 @@
         $("#submit_song").toggle();
     });
 });
+
     </script>
 </head>
 <body>
@@ -47,7 +48,7 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 </div>
 <hr>
 <h4>Add a Song</h4>
-<button id='form_button' onclick='addSong()'>Add Song</button>
+<button id='form_button'>Add Song</button>
 <div id='submit_song'> <!--make this invisible later? -->
   <form action='submit_song.php' method='post' id='submit_song'>
     <select name='genre'>

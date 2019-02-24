@@ -68,9 +68,8 @@ td {
   border-collapse: collapse;
   border-bottom: 1px gray;
   padding: 12px;
-
 }
 
-#submit_song {
+form {
   display: none;
 }

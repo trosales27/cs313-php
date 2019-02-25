@@ -44,8 +44,8 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 <button id="form_button" onClick="addSong()">Add Song</button>
 <!-- <div id="submit_song"> make this invisible later? -->
   <form action="submit_song.php" method="post" id="submit_song">
+  Genre:
     <select name="genre">
-    Genre:
       <?php
       foreach ($db->query('SELECT genre_name FROM genre') as $genre)
       {

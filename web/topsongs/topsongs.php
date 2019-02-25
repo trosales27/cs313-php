@@ -11,7 +11,15 @@
     <script>
       function addSong() {
         //console.log("I've been clicked!");
-        document.getElementById("submit_song").style.display = "block";
+        if (document.getElementById("submit_song").style.display === "none";) {
+          document.getElementById("submit_song").style.display = "block";
+          document.getElementById("form_button").innerHTML = "Hide";
+        }
+        else {
+          document.getElementById("submit_song").style.display = "none";
+          document.getElementById("form_button").innerHTML = "Add Song";
+        }
+        
       }
 
     </script>

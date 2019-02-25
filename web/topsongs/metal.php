@@ -30,7 +30,7 @@ function computePercentage($rating, $times_voted) {
 
 <h2>Top Metal Songs:</h2>
 <table>
-<th>Name</th><th>Artist</th><th>Album</th><th>Rating</th>
+<th>Rank</th><th>Name</th><th>Artist</th><th>Album</th><th>Rating</th>
 <?php
 $i = 1;
 foreach ($db->query("SELECT song_name, album, artist, rating, times_voted 

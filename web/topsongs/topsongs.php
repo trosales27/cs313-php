@@ -9,24 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="music.css" />
     <script>
-    //function addSong() {
-      //document.getElementById('addSong').style.visibility = visible;
-
-      //document.getElementById('addSong').hidden = false;
-    //}
-
-    function addSong() {
-      console.log("I've been clicked!");
-      document.getElementById("submit_song").style.display = "block";
-        //"#submit_song").toggle();
-    }
-
-    // $(document).ready(function(){
-    //   $("#form_button").click(function(){
-    //     console.log("I've been clicked!");
-    //     $("#submit_song").toggle();
-    //     });
-    //   });
+      function addSong() {
+        //console.log("I've been clicked!");
+        document.getElementById("submit_song").style.display = "block";
+      }
 
     </script>
 </head>

@@ -22,5 +22,6 @@ $stmt->bindValue(':genre', $genre, PDO::PARAM_STR);
 $stmt->bindValue(':times_voted', $times_voted, PDO::PARAM_INT);
 $stmt->execute();
 
+header("Location: topsongs.php");
 
 ?>

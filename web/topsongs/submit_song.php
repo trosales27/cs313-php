@@ -1,5 +1,7 @@
 <?php include 'load_songs.php' ;
 
+$print_r($_POST);
+
 $song = htmlspecialchars($_POST['song']);
 $album = htmlspecialchars($_POST['album']);
 $artist = htmlspecialchars($_POST['artist']);
@@ -22,6 +24,6 @@ $stmt->bindValue(':genre', $genre, PDO::PARAM_STR);
 $stmt->bindValue(':times_voted', $times_voted, PDO::PARAM_INT);
 $stmt->execute();
 
-header("Location: topsongs.php");
+//header("Location: topsongs.php");
 
 ?>

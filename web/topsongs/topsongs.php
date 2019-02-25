@@ -45,8 +45,8 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 <!-- <div id="submit_song"> make this invisible later? -->
   <form action="submit_song.php" method="post" id="submit_song">
     <select name="genre">
+    Genre:
       <?php
-      echo "Genre: ";
       foreach ($db->query('SELECT genre_name FROM genre') as $genre)
       {
         echo "<option value=$genre[genre_name]>$genre[genre_name]</option>";

@@ -15,17 +15,17 @@
       //document.getElementById('addSong').hidden = false;
     //}
 
-    // function addSong() {
-    //   console.log("I've been clicked!");
-    //     $("#submit_song").toggle();
-    // }
-
-    $(document).ready(function(){
-      $("#form_button").click(function(){
-        console.log("I've been clicked!");
+    function addSong() {
+      console.log("I've been clicked!");
         $("#submit_song").toggle();
-        });
-      });
+    }
+
+    // $(document).ready(function(){
+    //   $("#form_button").click(function(){
+    //     console.log("I've been clicked!");
+    //     $("#submit_song").toggle();
+    //     });
+    //   });
 
     </script>
 </head>
@@ -54,7 +54,7 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 </div>
 <hr>
 <h4>Add a Song</h4>
-<button id="form_button">Add Song</button>
+<button id="form_button" onClick="addSong()">Add Song</button>
 <!-- <div id="submit_song"> make this invisible later? -->
   <form action="submit_song.php" method="post" id="submit_song">
     <select name="genre">

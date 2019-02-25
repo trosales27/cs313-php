@@ -14,9 +14,9 @@
 
       //document.getElementById('addSong').hidden = false;
     //}
-    $("#form_button").click(function(){
+    ("#form_button").click(function(){
         console.log("I've been clicked!");
-        $("#submit_song").toggle();
+        ("#submit_song").toggle();
         });
 
 

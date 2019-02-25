@@ -17,7 +17,7 @@
 
     function addSong() {
       console.log("I've been clicked!");
-        $("#submit_song").toggle();
+        ("#submit_song").toggle();
     }
 
     // $(document).ready(function(){

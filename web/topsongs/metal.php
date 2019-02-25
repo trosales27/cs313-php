@@ -35,7 +35,7 @@ function computePercentage($rating, $times_voted) {
 foreach ($db->query("SELECT song_name, album, artist, rating, times_voted 
 FROM song_info 
 WHERE genre = 'Metal' 
-ORDER BY rating / (times_voted * 5)") as $song)
+ORDER BY rating / (times_voted * 5) DESC") as $song)
 {
     $song1 = $song['song_name'];
     $rating = $song['rating'];

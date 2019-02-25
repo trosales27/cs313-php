@@ -1,6 +1,6 @@
 <?php include 'load_songs.php' ;
 
-$print_r($_POST);
+print_r($_POST);
 
 $song = htmlspecialchars($_POST['song']);
 $album = htmlspecialchars($_POST['album']);

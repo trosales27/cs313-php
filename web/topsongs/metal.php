@@ -32,7 +32,10 @@ function computePercentage($rating, $times_voted) {
 <table>
 <th>Name</th><th>Artist</th><th>Album</th><th>Rating</th>
 <?php
-foreach ($db->query("SELECT song_name, album, artist, rating, times_voted FROM song_info WHERE genre = 'Metal'") as $song)
+foreach ($db->query("SELECT song_name, album, artist, rating, times_voted 
+FROM song_info 
+WHERE genre = 'Metal' 
+ORDER BY rating / (times_voted * 5)") as $song)
 {
     $song1 = $song['song_name'];
     $rating = $song['rating'];

@@ -32,6 +32,7 @@ function computePercentage($rating, $times_voted) {
 <table>
 <th>Name</th><th>Artist</th><th>Album</th><th>Rating</th>
 <?php
+$i = 1;
 foreach ($db->query("SELECT song_name, album, artist, rating, times_voted 
 FROM song_info 
 WHERE genre = 'Metal' 
@@ -45,10 +46,12 @@ ORDER BY rating / (times_voted * 5) ASC") as $song)
     echo "<input type='hidden' name='artist' value='$song[artist]'>";
     echo "<input type='hidden' name='rating' value=$rating>";
     echo "<input type='hidden' name='times_voted' value=$times_voted>";
-    echo "<tr><td>" . $song['song_name'] . "</td><td>" . $song['artist'] . "</td><td>" . $song['album'] . "</td><td>" . 
+    echo "<tr><td>$i. </td>";
+    echo "<td>" . $song['song_name'] . "</td><td>" . $song['artist'] . "</td><td>" . $song['album'] . "</td><td>" . 
     computePercentage($rating, $times_voted) . "</td><td><select name='vote'>
     <option value='1'>1</option><option value='2'>2</option><option value='3'>3</option>
     <option value='4'>4</option><option value='5'>5</option></select></td><td><button type='submit'>Like</button></form>";
+    $i++;
 }
 
 //NEED TO DISPLAY SONGS BY ORDER OF POPULARITY - make a sorted php array of songs based off popularity?

@@ -26,13 +26,4 @@ $stmt->execute();
 
 header("Location: {$_SERVER['HTTP_REFERER']}");
 die();
-
-//$query="UPDATE song_info SET (times_voted, rating) = ($times_voted, $rating) WHERE song_name = $song AND artist = $artist";
-
-//$statement = $db->prepare($query);
-//$statement->execute();
-
-// need to get this pushed to database
-
-//MAKE THE LIKE THING AN AJAX REQUEST YO
 ?>

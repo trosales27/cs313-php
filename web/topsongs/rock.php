@@ -5,7 +5,7 @@ include 'load_songs.php';
 function computePercentage($rating, $times_voted) {
     //echo "<script>console.log('in function');</script>";
     $percentage = 100 * ($rating / ($times_voted * 5));
-    return $percentage . "%";
+    return round($percentage, 2) . "%";
 }
 ?>
 
@@ -25,9 +25,13 @@ function computePercentage($rating, $times_voted) {
 
 <h2>Top Rock Songs:</h2>
 <table>
-<th>Name</th><th>Artist</th><th>Album</th><th>Rating</th>
+<th>Rank</th><th>Name</th><th>Artist</th><th>Album</th><th>Rating</th>
 <?php
-foreach ($db->query("SELECT song_name, album, artist, rating, times_voted FROM song_info WHERE genre = 'Rock'") as $song)
+$i = 1;
+foreach ($db->query("SELECT song_name, album, artist, rating, times_voted 
+FROM song_info 
+WHERE genre = 'Rock' 
+ORDER BY rating / (times_voted * 5) DESC") as $song)
 {
     $song1 = $song['song_name'];
     $rating = $song['rating'];
@@ -37,10 +41,12 @@ foreach ($db->query("SELECT song_name, album, artist, rating, times_voted FROM s
     echo "<input type='hidden' name='artist' value='$song[artist]'>";
     echo "<input type='hidden' name='rating' value=$rating>";
     echo "<input type='hidden' name='times_voted' value=$times_voted>";
-    echo "<tr><td>" . $song['song_name'] . "</td><td>" . $song['artist'] . "</td><td>" . $song['album'] . "</td><td>" . 
+    echo "<tr><td>$i. </td>";
+    echo "<td>" . $song['song_name'] . "</td><td>" . $song['artist'] . "</td><td>" . $song['album'] . "</td><td>" . 
     computePercentage($rating, $times_voted) . "</td><td><select name='vote'>
     <option value='1'>1</option><option value='2'>2</option><option value='3'>3</option>
     <option value='4'>4</option><option value='5'>5</option></select></td><td><button type='submit'>Like</button></form>";
+    $i++;
 }
 ?>
 </table>

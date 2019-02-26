@@ -2,10 +2,6 @@
 //METAL
 include 'load_songs.php';
 
-//Put all songs into an array, sort array using key-value pairs so that the highest rated songs are at the top
-//Iterate thorugh array to display all songs
-//Other option is to sort songs by rating int o the table?
-
 //TODO - Make sure each user can only vote on a song once
 
 function computePercentage($rating, $times_voted) {
@@ -53,8 +49,6 @@ ORDER BY rating / (times_voted * 5) DESC") as $song)
     <option value='4'>4</option><option value='5'>5</option></select></td><td><button type='submit'>Like</button></form>";
     $i++;
 }
-
-//NEED TO DISPLAY SONGS BY ORDER OF POPULARITY - make a sorted php array of songs based off popularity?
 ?>
 
 </table>

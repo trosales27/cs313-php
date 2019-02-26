@@ -5,7 +5,10 @@ $artist = $_POST["artist"];
 
 echo "song is $song and artist is $artist";
 
-if ($db->query("SELECT song_name FROM song_info WHERE song_name = $song AND artist = $artist") > 0) {
+$sql = "SELECT song_name FROM song_info WHERE song_name = $song AND artist = $artist";
+$result = $db->query($sql);
+
+if ($result->num_rows > 0) {
     echo "It's taken";
 }
 else {

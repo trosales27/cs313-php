@@ -15,6 +15,8 @@ else {
     echo "It's good!!";
 }
 
+echo "After everything";
+
 // if ($db->query > 0) {
 //     echo "greater than 0";
 // }

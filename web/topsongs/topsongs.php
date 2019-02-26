@@ -1,5 +1,4 @@
 <?php 
-session_start();
 include 'load_songs.php';
 
 ?>

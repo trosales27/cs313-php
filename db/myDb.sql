@@ -5,9 +5,9 @@ CREATE TABLE song_info(song_id SERIAL PRIMARY KEY,
 	song_name text NOT NULL,
 	album VARCHAR(50),
 	artist VARCHAR(50),
-	rating SMALLINT NOT NULL,
+	rating NUMERIC NOT NULL,
 	genre VARCHAR(50) REFERENCES genre(genre_name),
-	times_voted INTEGER NOT NULL CHECK (times_voted > 0));
+	times_voted NUMERIC NOT NULL CHECK (times_voted > 0));
 
 
 --Make anew column for percentage based off rating and times_voted

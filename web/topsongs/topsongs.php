@@ -11,8 +11,7 @@
     <script>
       function addSong() {
         //console.log("I've been clicked!");
-        //TODO - edit this button?
-        //TODO - correctly sort db, get top songs on drop down?, search bar, limit votes per user
+        //TODO - get top songs on drop down?, search bar, limit votes per user
         //TODO - a bit o front end
         if (document.getElementById("submit_song").style.display === "none") {
           console.log("button been clicked!");
@@ -23,13 +22,10 @@
           document.getElementById("submit_song").style.display = "none";
           document.getElementById("form_button").innerHTML = "Add Song";
         }
-        
       }
-
     </script>
 </head>
 <body>
-
 
 <?php include 'top_songs_header.php'; ?>
 
@@ -42,9 +38,18 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
   $link = strtolower($row['genre_name']) . ".php";
     echo "<a href=$link><div class='dropdown'>" . "<span>" . $row['genre_name'] . "</span></a>" . "<div class='dropdown-content'>" . 
     "<p>";
-    if ($row['genre_id'] == 1) { echo $genres[1]; } 
-    elseif ($row['genre_id'] == 2) { echo $genres[2]; }
-    elseif ($row['genre_id'] == 3) { echo $genres[3]; }
+    switch ($row['genre_id']) {
+      case 1: echo $genres[1];
+      break;
+      case 2: echo $genres[2];
+      break;
+      case 3: echo $genres[3];
+      break;
+
+    }
+    // if ($row['genre_id'] == 1) { echo $genres[1]; } 
+    // elseif ($row['genre_id'] == 2) { echo $genres[2]; }
+    // elseif ($row['genre_id'] == 3) { echo $genres[3]; }
     
     echo "</p></div></div>";
 }

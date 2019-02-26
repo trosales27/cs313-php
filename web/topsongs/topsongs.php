@@ -28,14 +28,6 @@ include 'load_songs.php';
           document.getElementById("form_button").innerHTML = "Add Song";
         }
       }
-
-      function validateSong() {
-        const song = document.getElementById("song");
-        const artist = document.getElementById("artist");
-        <?php
-          $db->query("SELECT song_name FROM song_info WHERE song_name = $song AND artist = $artist");
-        ?>
-      }
     </script>
 </head>
 <body>

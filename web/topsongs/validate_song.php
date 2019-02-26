@@ -6,7 +6,7 @@ $artist = $_POST["artist"];
 echo "song is $song and artist is $artist";
 
 $sql = "SELECT song_name FROM song_info WHERE song_name = $song AND artist = $artist";
-$result = $db->query($sql);
+$result = $db->query($sql); // getting a null value here
 
 if ($result->num_rows > 0) {
     echo "It's taken";

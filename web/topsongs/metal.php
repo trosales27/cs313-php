@@ -19,6 +19,11 @@ function computePercentage($rating, $times_voted) {
     <title>Top Metal Songs</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="music.css">
+    <script>
+    function validateVote() {
+        //check if song voting on has a sessiontoken given already
+    }
+    </script>
 </head>
 <body>
 
@@ -37,7 +42,7 @@ ORDER BY rating / (times_voted * 5) DESC") as $song)
     $song1 = $song['song_name'];
     $rating = $song['rating'];
     $times_voted = $song['times_voted'];
-    echo "<form action='vote.php' method='post'>";
+    echo "<form action='vote.php' method='post' onsubmit='return 'validateVote()'>";
     echo "<input type='hidden' name='song_name' value='$song[song_name]'>";
     echo "<input type='hidden' name='artist' value='$song[artist]'>";
     echo "<input type='hidden' name='rating' value=$rating>";

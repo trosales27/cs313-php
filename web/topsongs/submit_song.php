@@ -1,4 +1,6 @@
-<?php include 'load_songs.php' ;
+<?php 
+session_start();
+include 'load_songs.php' ;
 
 print_r($_POST);
 

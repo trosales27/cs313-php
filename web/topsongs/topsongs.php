@@ -1,4 +1,8 @@
-<?php include 'load_songs.php' ;?>
+<?php 
+session_start();
+include 'load_songs.php';
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -11,9 +15,9 @@
     <script>
       function addSong() {
         //console.log("I've been clicked!");
-        //TODO - get top songs on drop down?, search bar, limit votes per user
+        //TODO - get top songs on drop down?, search bar, *limit votes per user
         //TODO - a bit o front end
-        //TODO - Error if song is already in database
+        //TODO - *Error if song is already in database
         //TODO - comments?
         if (document.getElementById("submit_song").style.display === "none") {
           //console.log("button been clicked!");
@@ -24,6 +28,14 @@
           document.getElementById("submit_song").style.display = "none";
           document.getElementById("form_button").innerHTML = "Add Song";
         }
+      }
+
+      function validateSong() {
+        const song = document.getElementById("song");
+        const artist = document.getElementById("artist");
+        <?php
+          $db->query("SELECT song_name FROM song_info WHERE song_name = $song AND artist = $artist");
+        ?>
       }
     </script>
 </head>
@@ -61,7 +73,7 @@ foreach ($db->query('SELECT genre_name, genre_id FROM genre') as $row)
 <hr>
 <h4>Add a Song</h4>
 <button id="form_button" onClick="addSong()">Add Song</button>
-  <form action="submit_song.php" method="post" id="submit_song">
+  <form action="validate_song.php" method="post" id="submit_song">
   Genre:
     <select name="genre">
       <?php

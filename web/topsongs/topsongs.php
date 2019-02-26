@@ -13,8 +13,10 @@
         //console.log("I've been clicked!");
         //TODO - get top songs on drop down?, search bar, limit votes per user
         //TODO - a bit o front end
+        //TODO - Error if song is already in database
+        //TODO - comments?
         if (document.getElementById("submit_song").style.display === "none") {
-          console.log("button been clicked!");
+          //console.log("button been clicked!");
           document.getElementById("submit_song").style.display = "block";
           document.getElementById("form_button").innerHTML = "Hide";
         }

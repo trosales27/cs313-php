@@ -15,14 +15,14 @@
         //TODO - a bit o front end
         //TODO - Error if song is already in database
         //TODO - comments?
-        if (document.getElementById("submit_song").style.display === "none") {
+        if (document.getElementById("submit_song").style.display != "none") {
           //console.log("button been clicked!");
-          document.getElementById("submit_song").style.display = "block";
-          document.getElementById("form_button").innerHTML = "Hide";
-        }
-        else {
           document.getElementById("submit_song").style.display = "none";
           document.getElementById("form_button").innerHTML = "Add Song";
+        }
+        else {
+          document.getElementById("submit_song").style.display = "block";
+          document.getElementById("form_button").innerHTML = "Hide";
         }
       }
     </script>

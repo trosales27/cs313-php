@@ -15,6 +15,7 @@
         //TODO - correctly sort db, get top songs on drop down?, search bar, limit votes per user
         //TODO - a bit o front end
         if (document.getElementById("submit_song").style.display === "none";) {
+          console.log("button been clicked!");
           document.getElementById("submit_song").style.display = "block";
           document.getElementById("form_button").innerHTML = "Hide";
         }
